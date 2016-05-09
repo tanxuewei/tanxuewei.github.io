@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>读&lt;javascript高级程序设计&gt;笔记 | Shirley</title>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+  
+    <meta name="keywords" content="shirlet,前端,设计,Hexo主题,前端开发,用户体验,设计,frontend,design,nodejs,JavaScript" />
+  
+
+  <meta name="description" content="第一章(1）p1 
+js诞生1995年。
+以前由服务器来做输入验证操作，后来netscape公司希望js来做，因为那是拨号上网得年代，通信很慢，所以格式不正确又发给服务端，服务端再反馈回来，会很耗时间，验证放在客户端就完成就很好。
+js又简单又复杂，简单是因为容易学，复杂是因为真正掌握需要数年时间。
+要全面理解和掌握js，就要弄清它的本质，历史和局限性。
+(2) p2
+javascript的含义要">
+<meta property="og:type" content="article">
+<meta property="og:title" content="读<javascript高级程序设计>笔记">
+<meta property="og:url" content="http://tanxuewei.github.io/2016/05/09/读-javascript高级程序设计-笔记/index.html">
+<meta property="og:site_name" content="Shirley">
+<meta property="og:description" content="第一章(1）p1 
+js诞生1995年。
+以前由服务器来做输入验证操作，后来netscape公司希望js来做，因为那是拨号上网得年代，通信很慢，所以格式不正确又发给服务端，服务端再反馈回来，会很耗时间，验证放在客户端就完成就很好。
+js又简单又复杂，简单是因为容易学，复杂是因为真正掌握需要数年时间。
+要全面理解和掌握js，就要弄清它的本质，历史和局限性。
+(2) p2
+javascript的含义要">
+<meta property="og:updated_time" content="2016-05-09T12:34:58.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="读<javascript高级程序设计>笔记">
+<meta name="twitter:description" content="第一章(1）p1 
+js诞生1995年。
+以前由服务器来做输入验证操作，后来netscape公司希望js来做，因为那是拨号上网得年代，通信很慢，所以格式不正确又发给服务端，服务端再反馈回来，会很耗时间，验证放在客户端就完成就很好。
+js又简单又复杂，简单是因为容易学，复杂是因为真正掌握需要数年时间。
+要全面理解和掌握js，就要弄清它的本质，历史和局限性。
+(2) p2
+javascript的含义要">
+  
+  
+
+  
+
+
+  <link rel="stylesheet" href="/css/styles.css" type="text/css">
+  
+
+  
+  <script type="text/javascript">
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "//hm.baidu.com/hm.js?57e94d016e201fba3603a8a2b0263af0";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
+
+
+</head>
+
+<body>
+  <div class="content-post">
+  <div class="toolbox">
+  <div class="home-entry">盒子</div>
+  <ul class="list-entry">
+    
+      
+        <li class="item-entry">
+          <a href="/">首页</a>
+        </li>
+      
+    
+      
+        <li class="item-entry">
+          <a href="/archives/">博客</a>
+        </li>
+      
+    
+      
+        <li class="item-entry">
+          <a href="/category/">分类</a>
+        </li>
+      
+    
+      
+        <li class="item-entry">
+          <a href="/tags/">标签</a>
+        </li>
+      
+    
+      
+        <li class="item-entry">
+          <a href="/about/">关于</a>
+        </li>
+      
+    
+      
+        <li class="item-entry">
+          <a href="/atom.xml">RSS</a>
+        </li>
+      
+    
+  </ul>
+</div>
+
+  <article id="post-读-javascript高级程序设计-笔记" class="article article-type-post" itemscope itemprop="blogPost">
+  <header class="article-header">
+    <h1 class="post-title">读&lt;javascript高级程序设计&gt;笔记</h1>
+
+    <div class="article-meta">
+      <span>2016-05-09</span>
+
+      <span> | </span>
+
+      <span class="article-author">Shirley Tan</span>
+
+      <span> | </span>
+
+      
+
+    </div>
+  </header>
+
+  <div class="article-inner">
+
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h3 id="u7B2C_u4E00_u7AE0"><a href="#u7B2C_u4E00_u7AE0" class="headerlink" title="第一章"></a>第一章</h3><p>(1）p1 </p>
+<p>js诞生1995年。</p>
+<p>以前由服务器来做输入验证操作，后来netscape公司希望js来做，因为那是拨号上网得年代，<br>通信很慢，所以格式不正确又发给服务端，服务端再反馈回来，会很耗时间，<br>验证放在客户端就完成就很好。</p>
+<p>js又简单又复杂，简单是因为容易学，复杂是因为真正掌握需要数年时间。</p>
+<p>要全面理解和掌握js，就要弄清它的本质，历史和局限性。</p>
+<p>(2) p2</p>
+<p>javascript的含义要比ecmascript范畴多得多，<br>因为完整得javascript实现包括三个部分，<br>ECMAScript+dom（文档对象模型）+bom（浏览器对象模型）</p>
+<p>（4）p4<br>08年ie,firefox,safari,chrome,opera全部做到了与ecma-262兼容，<br>ie8是第一个实现ecma-262第五版本（es5）的浏览器。</p>
+<p>（5）p5<br> dom是针对xml但经过扩展用于html得一种api接口。dom将页面映射为多层节点结构。<br>html页面就是由不同类型的节点构成的，每个节点又带着不同类型数据。<br>借助dom提供的接口，就可以轻松删除，添加，替换或者修改任何节点。</p>
+<p>（6）p6<br>dom标准是负责制定web通信标准的w3c（world wide web consortium）组织规定的，<br>不是ecma组织制定。</p>
+<p>dom并非仅针对js的，很多别得语言也实现了dom….啥语言啊？</p>
+<p>（7）p7<br>SVG，MathML也都实现了dom</p>
+<p>（8）p8<br>BOM是browser object model，浏览器对象模型。<br>bom以前没有标准，后来在h5里头得到了解决，h5把许多bom都写入正式规范。<br>bom范畴包括navigator对象，location对象，screen对象，cookies等<br>以及ajax得XMLHttpRequest。</p>
+<p>bom是提供与浏览器交互得方法和接口。<br>dom是提供访问和操作网页内容得方法和接口。</p>
+<h3 id="u7B2C_u4E8C_u7AE0"><a href="#u7B2C_u4E8C_u7AE0" class="headerlink" title="第二章"></a>第二章</h3><p>（1）p10</p>
+<p>defer表示脚本可以延迟到文档完全解析和显示后再执行，也是只对外部脚本有效。(会先于DOMContentLoaded事件，13章，p391)<br>script得defer属性是立即下载js，但延迟执行js。</p>
+<p>async表示立即下载脚本，但不妨碍页面其他操作，只对外部脚本有效。<br>async 一定会在load前执行，但是可能会在DOMContentLoaded前后执行.</p>
+<p>（2）p16<br>外部js得优点，<br>可缓存，A页面和B页面都引用了某个js，<br>则A页面下载js后，B页面可以直接使用缓存里得这个js。</p>
+<p>而且可维护性也要好，一次修改，多处运行。</p>
+<p>（3）p18</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&lt;noscript&gt;本页面需要浏览器支持js&lt;/noscript&gt;</span><br><span class="line">适用于禁用js以及浏览器真得不支持js</span><br></pre></td></tr></table></figure>
+<h3 id="u7B2C_u4E09_u7AE0"><a href="#u7B2C_u4E09_u7AE0" class="headerlink" title="第三章"></a>第三章</h3>
+      
+    </div>
+
+    
+      
+
+    
+
+  </div>
+</article>
+
+
+
+<section class="disqus-comments">
+  <div id="disqus_thread">
+    <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+  </div>
+</section>
+
+
+
+
+</div>
+
+  
+<script>
+  var disqus_shortname = 'Shirley';
+  
+  var disqus_url = 'http://tanxuewei.github.io/2016/05/09/读-javascript高级程序设计-笔记/';
+  
+  (function(){
+    var dsq = document.createElement('script');
+    dsq.type = 'text/javascript';
+    dsq.async = true;
+    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+  })();
+</script>
+
+
+  <!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+<script type="text/javascript">
+var duoshuoQuery = {short_name:"undefined"};
+(function() {
+  var ds = document.createElement('script');
+  ds.type = 'text/javascript';ds.async = true;
+  ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+  ds.charset = 'UTF-8';
+  (document.getElementsByTagName('head')[0]
+   || document.getElementsByTagName('body')[0]).appendChild(ds);
+})();
+</script>
+<!-- 多说公共JS代码 end -->
+
+</body>
+</html>
