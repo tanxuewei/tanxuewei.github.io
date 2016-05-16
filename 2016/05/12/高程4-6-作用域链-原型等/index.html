@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>高程4-6 作用域链 原型等 | Shirley</title>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+  
+    <meta name="keywords" content="shirley,前端,设计,Hexo主题,前端开发,用户体验,设计,frontend,design,nodejs,JavaScript" />
+  
+
+  <meta name="description" content="为了更好的了解作用域以及原型的问题
+参考文章：1、javascript核心2、简单粗暴地理解js原型链–js面向对象编程
+第四章 变量、作用域和内存问题（p68）(1)p681、数据类型：基本类型和引用类型基本类型：Undefined、Null、Boolean、Number、String引用类型：保存在内存中的对象，javascript不允许直接访问内存中的位置，也就是说不能直接操作对象的内存空间">
+<meta property="og:type" content="article">
+<meta property="og:title" content="高程4-6 作用域链 原型等">
+<meta property="og:url" content="http://tanxuewei.github.io/2016/05/12/高程4-6-作用域链-原型等/index.html">
+<meta property="og:site_name" content="Shirley">
+<meta property="og:description" content="为了更好的了解作用域以及原型的问题
+参考文章：1、javascript核心2、简单粗暴地理解js原型链–js面向对象编程
+第四章 变量、作用域和内存问题（p68）(1)p681、数据类型：基本类型和引用类型基本类型：Undefined、Null、Boolean、Number、String引用类型：保存在内存中的对象，javascript不允许直接访问内存中的位置，也就是说不能直接操作对象的内存空间">
+<meta property="og:updated_time" content="2016-05-12T10:11:07.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="高程4-6 作用域链 原型等">
+<meta name="twitter:description" content="为了更好的了解作用域以及原型的问题
+参考文章：1、javascript核心2、简单粗暴地理解js原型链–js面向对象编程
+第四章 变量、作用域和内存问题（p68）(1)p681、数据类型：基本类型和引用类型基本类型：Undefined、Null、Boolean、Number、String引用类型：保存在内存中的对象，javascript不允许直接访问内存中的位置，也就是说不能直接操作对象的内存空间">
+  
+  
+
+  
+
+
+  <link rel="stylesheet" href="/css/styles.css" type="text/css">
+  <script src="/js/nem.js"></script>
+  
+<!-- Google Analytics -->
+<script type="text/javascript">
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'UA-77517652-1', 'auto');
+ga('send', 'pageview');
+
+</script>
+<!-- End Google Analytics -->
+
+
+  
+  <script type="text/javascript">
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "//hm.baidu.com/hm.js?57e94d016e201fba3603a8a2b0263af0";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
+
+
+</head>
+
+<body>
+  <div class="content-post">
+  <div class="toolbox">
+  <div class="home-entry">盒子</div>
+  <ul class="list-entry">
+    
+      
+        <li class="item-entry">
+          <a href="/">首页</a>
+        </li>
+      
+    
+      
+        <li class="item-entry">
+          <a href="/archives/">博客</a>
+        </li>
+      
+    
+      
+        <li class="item-entry">
+          <a href="/category/">分类</a>
+        </li>
+      
+    
+      
+        <li class="item-entry">
+          <a href="/tags/">标签</a>
+        </li>
+      
+    
+      
+        <li class="item-entry">
+          <a href="/about/">关于</a>
+        </li>
+      
+    
+      
+        <li class="item-entry">
+          <a href="/atom.xml">RSS</a>
+        </li>
+      
+    
+  </ul>
+</div>
+
+  <article id="post-高程4-6-作用域链-原型等" class="article article-type-post" itemscope itemprop="blogPost">
+  <header class="article-header">
+    <h1 class="post-title">高程4-6 作用域链 原型等</h1>
+
+    <div class="article-meta">
+      <span>2016-05-12</span>
+
+      <span> | </span>
+
+      <span class="article-author">Shirley Tan</span>
+
+      <span> | </span>
+
+      
+
+    </div>
+  </header>
+
+  <div class="article-inner">
+
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>为了更好的了解作用域以及原型的问题</p>
+<p>参考文章：<br><a href="https://mp.weixin.qq.com/s?__biz=MjM5MTA1MjAxMQ==&mid=402446684&idx=1&sn=587c1bc6318b893be71c9fb4e6a538fd&scene=1&srcid=0322YxccOnbFQhULBEbiWGjB&key=710a5d99946419d95cd5af9df5ec89f5c31c685067a414b04c018d2b93f6ff6d3f167399c1fa38ea8c1cced397de4c82&ascene=0&uin=NjgxMDc4NzQw&devicetype=iMac+MacBookPro12%2C1+OSX+OSX+10.10.5+build(14F27)&version=11020201&pass_ticket=MZOcKzTJv6f%2B7BvvSIMq%2BTlEnGoxo5FD8ehXQTouOnGo9yl3dC7fQTo%2FJPl%2B0rd7" target="_blank" rel="external">1、javascript核心</a><br><a href="https://mp.weixin.qq.com/s?__biz=MzAxODE2MjM1MA==&mid=2651550838&idx=1&sn=22de8ecb52dc55bd6850bf9cc72cdedb&scene=1&srcid=05126fvQXzBpBErqqQDDK9La&key=b28b03434249256b4da15d672dda12b019152472f6ca6d5c8dc34354cafe41d5edd397f5dddd1cd57088e9e1e93e5edc&ascene=0&uin=NjgxMDc4NzQw&devicetype=iMac+MacBookPro12%2C1+OSX+OSX+10.10.5+build(14F27)&version=11020201&pass_ticket=%2F3eHPqK80PvGhtrZhg%2FW2tJ0JTIDU%2BITKLQ%2FlvEWse8sFxIHNX9OJwN%2FwLvdzj5s" target="_blank" rel="external">2、简单粗暴地理解js原型链–js面向对象编程</a></p>
+<h3 id="u7B2C_u56DB_u7AE0__u53D8_u91CF_u3001_u4F5C_u7528_u57DF_u548C_u5185_u5B58_u95EE_u9898_uFF08p68_uFF09"><a href="#u7B2C_u56DB_u7AE0__u53D8_u91CF_u3001_u4F5C_u7528_u57DF_u548C_u5185_u5B58_u95EE_u9898_uFF08p68_uFF09" class="headerlink" title="第四章 变量、作用域和内存问题（p68）"></a>第四章 变量、作用域和内存问题（p68）</h3><p>(1)p68<br>1、数据类型：基本类型和引用类型<br>基本类型：Undefined、Null、Boolean、Number、String<br>引用类型：保存在内存中的对象，javascript不允许直接访问内存中的位置，也就是说不能直接操作对象的内存空间，实际上操作的是对象的引用.(注释1：当复制保存着对象的某个变量时，操作的是对象的引用。但在为对象添加属性时，操作的是实际的对象？？)</p>
+<p>2、复制变量值<br>基本类型：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">var a = <span class="number">5</span>;</span><br><span class="line">var b = a;</span><br><span class="line">a = <span class="number">6</span>;</span><br><span class="line">alert(a); //<span class="number">6</span></span><br><span class="line">alert(b); //<span class="number">5</span></span><br></pre></td></tr></table></figure></p>
+<p>引用类型：复制后，复制一份到新的存储空间中，但是这个副本实际上是一个指针，这个指针指向存储在堆中的一个对象。两个变量实际上将引用同一个对象。<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">var a = &#123;&#125;;</span><br><span class="line">var b = a;</span><br><span class="line">a.name = <span class="string">'shirley'</span>;</span><br><span class="line">alert(a); //&#123;name: <span class="string">"shirley"</span>&#125;</span><br><span class="line">alert(b); //&#123;name: <span class="string">"shirley"</span>&#125;</span><br></pre></td></tr></table></figure></p>
+<p>3、传递参数<br>ECMAScript中所有函数的参数都是按值传递的。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">function</span> <span class="built_in">set</span>Name(obj)&#123;</span><br><span class="line">    obj.name = <span class="string">'shirley'</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">var person = new Object();</span><br><span class="line"><span class="built_in">set</span>Name(person);</span><br><span class="line">alert(person.name); // <span class="string">'shirley'</span></span><br><span class="line"></span><br><span class="line">即使这个变量是按值传递的，obj也会按引用来访问同一个对象。</span><br><span class="line"></span><br><span class="line"><span class="keyword">function</span> <span class="built_in">set</span>Name(obj)&#123;</span><br><span class="line">    obj.name = <span class="string">'shirley'</span>;</span><br><span class="line">    obj = new Object();</span><br><span class="line">    obj.name = <span class="string">'xiaofang'</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">var person = new Object();</span><br><span class="line"><span class="built_in">set</span>Name(person);</span><br><span class="line">alert(person.name); // <span class="string">'shirley'</span></span><br><span class="line"></span><br><span class="line">说明不是按引用传递的。</span><br><span class="line">可以把ECMAScript函数的参数想象成局部变量。</span><br></pre></td></tr></table></figure>
+<p>4、检测类型<br>typeof  检测是神马（typeof null == ‘object’）<br>instanceof   神马类型的对象<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">var person = [<span class="number">1</span>,<span class="number">2</span>,<span class="number">3</span>];</span><br><span class="line">alert(person instanceof Array); //<span class="literal">true</span></span><br><span class="line">alert(person instanceof Object); //<span class="literal">true</span></span><br></pre></td></tr></table></figure></p>
+<p>（p72 typeof浏览器差别）</p>
+<p>(2)p73 执行环境及作用域<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">var color = <span class="string">'blue'</span>;</span><br><span class="line"><span class="keyword">function</span> <span class="function"><span class="title">changeColor</span></span>()&#123;</span><br><span class="line">    <span class="keyword">if</span> (color === <span class="string">'blue'</span>)&#123;</span><br><span class="line">        color = <span class="string">'red'</span>;</span><br><span class="line">    &#125;<span class="keyword">else</span> &#123;</span><br><span class="line">        color = <span class="string">'green'</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line">changeColor();</span><br><span class="line">alert(color); //<span class="string">'red'</span></span><br></pre></td></tr></table></figure></p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">var color = <span class="string">'blue'</span>;</span><br><span class="line"><span class="keyword">function</span> <span class="function"><span class="title">changeColor</span></span>()&#123;</span><br><span class="line">    var anotherColor = <span class="string">'red'</span>;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">function</span> <span class="function"><span class="title">swapColors</span></span>()&#123;</span><br><span class="line">        var tempColor = anotherColor;</span><br><span class="line">        anotherColor = color;</span><br><span class="line">        color = tempColor;</span><br><span class="line">    &#125;</span><br><span class="line">    swapColors();</span><br><span class="line">&#125;</span><br><span class="line">changeColor();</span><br></pre></td></tr></table></figure>
+<p>p75 延长作用域链是干嘛的??</p>
+<p>p76 没有块级作用域</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span> (<span class="literal">true</span>)&#123;</span><br><span class="line">    var color = <span class="string">'red'</span>;</span><br><span class="line">&#125;</span><br><span class="line">alert(color); //red</span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> (var i=<span class="number">0</span>; i&lt;<span class="number">10</span>; i++)&#123;</span><br><span class="line">    console.log(i);</span><br><span class="line">&#125;</span><br><span class="line">alert(i); //<span class="number">10</span></span><br></pre></td></tr></table></figure>
+<h3 id="u7B2C_u4E94_u7AE0__u5F15_u7528_u7C7B_u578B_p83"><a href="#u7B2C_u4E94_u7AE0__u5F15_u7528_u7C7B_u578B_p83" class="headerlink" title="第五章 引用类型 p83"></a>第五章 引用类型 p83</h3><p>1、Object<br>2、Array<br> (1)<br> var arr = [1, 2];<br> arr[2]; //undefined<br> arr.length = 1;(可以设置数组长度)</p>
+<p> (2) Array.isArray(value)  //验证是否是数组，IE 9+<br> (3) 方法<br>    toLocaleString() -&gt;字符串<br>    toString（）-》字符串<br>    valueOf（） -》数组<br>    alert 接收字符串参数， 会在后台调用toString（）方法<br>    join() 如果不传值  IE7会用undefined作为分隔符<br>    push（返回数组长度）、pop（返回移除项）</p>
+<pre><code>var arr = [111,333];
+arr.pop(); // 333(可用此方法取得最后一项)
+shift (移除第一项)  unshift (在开始端添加项)
+reverse 
+</code></pre>
+      
+    </div>
+
+    
+      
+
+    
+
+  </div>
+</article>
+
+
+
+<section class="disqus-comments">
+  <div id="disqus_thread">
+    <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+  </div>
+</section>
+
+
+
+
+</div>
+
+  
+<script>
+  var disqus_shortname = 'Shirley';
+  
+  var disqus_url = 'http://tanxuewei.github.io/2016/05/12/高程4-6-作用域链-原型等/';
+  
+  (function(){
+    var dsq = document.createElement('script');
+    dsq.type = 'text/javascript';
+    dsq.async = true;
+    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+  })();
+</script>
+
+
+  <!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+<script type="text/javascript">
+var duoshuoQuery = {short_name:"undefined"};
+(function() {
+  var ds = document.createElement('script');
+  ds.type = 'text/javascript';ds.async = true;
+  ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+  ds.charset = 'UTF-8';
+  (document.getElementsByTagName('head')[0]
+   || document.getElementsByTagName('body')[0]).appendChild(ds);
+})();
+</script>
+<!-- 多说公共JS代码 end -->
+
+</body>
+</html>
