@@ -660,7 +660,7 @@
 				}else{
 					getEle("support").innerHTML="否";
 				}
-				getEle("ua").innerHTML=timeData.ua;
+				// getEle("ua").innerHTML=timeData.ua;
 				getEle("os").innerHTML=timeData.uostype+'/'+timeData.uosversion;
 				getEle("browser").innerHTML=timeData.ubrowsertype+'/'+timeData.ubrowserversion;
 				getEle("resolution").innerHTML=timeData.uresolution;
