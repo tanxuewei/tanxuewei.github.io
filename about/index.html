@@ -18,7 +18,7 @@
 <meta property="og:site_name" content="Shirley">
 <meta property="og:description" content="操作系统(类型/版本): Mac OS/10.10.5            浏览器(类型/版本): Chrome/50            分辨率: 1280*800                        页面来源:             访客独立标识:             是否支持performance(IE9+):             DNS时间：">
 <meta property="og:image" content="http://i.ndtvimg.com/i/2015-08/happy-smiley_650x400_61439186708.jpg">
-<meta property="og:updated_time" content="2016-05-19T07:41:27.000Z">
+<meta property="og:updated_time" content="2016-05-19T09:07:09.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="前端性能监控字段">
 <meta name="twitter:description" content="操作系统(类型/版本): Mac OS/10.10.5            浏览器(类型/版本): Chrome/50            分辨率: 1280*800                        页面来源:             访客独立标识:             是否支持performance(IE9+):             DNS时间：">
@@ -34,8 +34,10 @@
  -->
   <script> 
     window.NEM = window.NEM || {};  
+    NEM.marksArr=[]; NEM.mark=function(markName,send){var obj={"markName":markName,"time":+new Date(),"send":send ? send : false};if(markName && typeof markName === "string"){ NEM.marksArr.push(obj)}};
+
     window.NEM.config = {'key':'1122334455','clientStart':new Date().getTime()}; 
-    (function() {var n = document.getElementsByTagName('script')[0],s = document.createElement('script');s.async="async";s.src = '/js/nem.js';n.parentNode.insertBefore(s, n);})();
+  (function() {var n = document.getElementsByTagName('script')[0],s = document.createElement('script');s.async="async";s.src = '/js/nem.js';n.parentNode.insertBefore(s, n);})();
     </script>
     <script src="http://libs.baidu.com/jquery/1.4.2/jquery.min.js"></script>
     <link href="http://www.kaola.com/r/core.css?86023db32069c6707278ebefc9a91e32" type="text/css" rel="stylesheet"/>
@@ -51,22 +53,9 @@
     #wrap .m-ua-info .name {display: inline-block; width: 250px;}
     #wrap .m-ua-info .value {max-width:400px;background-color: #000;color: #fff;padding: 5px 10px;display:inline-block;}
     </style>
-    <script>NEM.blankscreen=+new Date();</script>
-  
-<!-- Google Analytics -->
-<script type="text/javascript">
-(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-
-ga('create', 'UA-77517652-1', 'auto');
-ga('send', 'pageview');
-
-</script>
-<!-- End Google Analytics -->
-
-
+    <script>NEM.mark("blankscreen");</script>
+  <!-- 
+ -->
 </head>
 
 <body>
@@ -136,8 +125,10 @@ ga('send', 'pageview');
 
     <div class="article-entry" itemprop="articleBody">
       
-        <p><div class="wrap" id="wrap"><br>    <div id="ua-info" class="m-ua-info"><br>        <ul><li><span class="name">操作系统(类型/版本): </span><span class="value" id="os">Mac OS/10.10.5</span></li><br>            <li><span class="name">浏览器(类型/版本): </span><span class="value" id="browser">Chrome/50</span></li><br>            <li><span class="name">分辨率: </span><span class="value" id="resolution">1280*800</span><br>            </li><br>            <li><span class="name">页面来源: </span><span class="value" id="referrer"></span></li><br>            <li><span class="name">访客独立标识: </span><span class="value" id="uid"></span></li><br>            <li><span class="name">是否支持performance(IE9+): </span><span class="value" id="support"></span></li><br>            <li><span class="name">DNS时间：</span><span class="value" id="dns"></span></li><br>            <li><span class="name">TCP时间：</span><span class="value" id="tcp"></span></li><br>            <li><span class="name">httpResponse：</span><span class="value" id="httpresponse"></span></li><br>            <li><span class="name">白屏时间：</span><span class="value" id="blankscreen"></span></li><br>            <li><span class="name">首屏时间：</span><span class="value" id="firstscreen"></span></li><br>            <li><span class="name">domReady时间：</span><span class="value" id="domready"></span></li><br>            <li><span class="name">load时间：</span><span class="value" id="load"></span></li><br>            <li><span class="name">静态资源请求总量：</span><span class="value" id="staticnum"></span></li><br>            <li><span class="name">Js错误信息：</span><span class="value" id="emsg">无</span></li><br>            <li><span class="name">Js错误所在文件：</span><span class="value" id="efile">无</span></li><br>            <li><span class="name">Js错误所在行号：</span><span class="value" id="erow">无</span></li><br>            <li><span class="name">Js错误所在列号：</span><span class="value" id="ecolumn">无</span></li><br>            <li><span class="name">Js错误栈信息：</span><span class="value" id="estack">无</span></li><br>        </ul><br>    </div><br></div><br><img src="http://i.ndtvimg.com/i/2015-08/happy-smiley_650x400_61439186708.jpg" style="display:none;" alt=""></p>
-<script>NEM.firstscreen=+new Date();alert(a);</script>
+        <p><div class="wrap" id="wrap"><br>    <div id="ua-info" class="m-ua-info"><br>        <ul><li><span class="name">操作系统(类型/版本): </span><span class="value" id="os">Mac OS/10.10.5</span></li><br>            <li><span class="name">浏览器(类型/版本): </span><span class="value" id="browser">Chrome/50</span></li><br>            <li><span class="name">分辨率: </span><span class="value" id="resolution">1280*800</span><br>            </li><br>            <li><span class="name">页面来源: </span><span class="value" id="referrer"></span></li><br>            <li><span class="name">访客独立标识: </span><span class="value" id="uid"></span></li><br>            <li><span class="name">是否支持performance(IE9+): </span><span class="value" id="support"></span></li><br>            <li><span class="name">DNS时间：</span><span class="value" id="dns"></span></li><br>            <li><span class="name">TCP时间：</span><span class="value" id="tcp"></span></li><br>            <li><span class="name">httpResponse：</span><span class="value" id="httpresponse"></span></li><br>            <li><span class="name">白屏时间：</span><span class="value" id="blankscreen"></span></li><br>            <li><span class="name">首屏时间：</span><span class="value" id="firstscreen"></span></li><br>            <li><span class="name">domReady时间：</span><span class="value" id="domready"></span></li><br>            <li><span class="name">load时间：</span><span class="value" id="load"></span></li><br>            <li><span class="name">静态资源请求总量：</span><span class="value" id="staticnum"></span></li><br>            <li><span class="name">Js错误信息：</span><span class="value" id="emsg">无</span></li><br>            <li><span class="name">Js错误所在文件：</span><span class="value" id="efile">无</span></li><br>            <li><span class="name">Js错误所在行号：</span><span class="value" id="erow">无</span></li><br>            <li><span class="name">Js错误所在列号：</span><span class="value" id="ecolumn">无</span></li><br>            <li><span class="name">Js错误栈信息：</span><span class="value" id="estack">无</span></li><br>        </ul><br>    </div><br></div></p>
+<script>NEM.mark("jun", true);</script>
+<img src="http://i.ndtvimg.com/i/2015-08/happy-smiley_650x400_61439186708.jpg" style="display:none;" alt="">
+<script>NEM.mark("firstscreen");alert(a);</script>
       
     </div>
 

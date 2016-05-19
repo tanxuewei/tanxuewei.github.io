@@ -20,10 +20,10 @@
 		//工具函数对象
 		var util={
 			setCookie:function(name,value){
-				var Days = 30; 
+				var Days = 365; 
     			var exp = new Date(); 
     			exp.setTime(exp.getTime() + Days*24*60*60*1000); 
-    			document.cookie = name + "="+ escape (value) + ";expires=" + exp.toGMTString(); 
+    			document.cookie = name + "="+ escape (value) + ";expires=" + exp.toGMTString()+";path=/;"; 
 			},
 			randNum:function(){
 				return 1000000000 + Math.floor(Math.random() * (9999999999 - 1000000000));
@@ -466,8 +466,10 @@
 		function sendDataFun(str,type){
 			var random=util.randNum();
 			var imgObj=new Image();
-			//随机数+用户唯一标识+打点数据类型+打点数据内容
-			imgObj.src="http://www.163.com/xx.gif?random="+random+"&"+"userid="+_unique_user+"&"+"dtype="+type+"&"+str;
+			var pdid=NEM.config.key;
+			//随机数+用户唯一标识+打点数据类型+产品id+打点数据内容
+			imgObj.src="http://www.163.com/xx.gif?random="+random+"&userid="+_unique_user+"&pdid="+pdid+"&dtype="+type+"&"+str;
+			imgObj=null;
 		}
 
 		//确认独立访客
@@ -515,37 +517,9 @@
         }
         contentLoaded(function(){NEM.domReady=new Date().getTime()});
 
-		//页面打点接口
-		NEM.marksArr=[];
-		NEM.mark=function(){
-			if(markName && (typeof markName=="string")){
-				var obj={
-					"markName":"",
-					"time":0
-				};
-				obj["markName"]=markName || "";
-				obj["time"]=new Date().getTime();
-				this.marksArr.push(obj);
-
-				if(arguments[1] && arguments[1]===true){
-					//发送打点数据
-					var sendData=util.obj2string(obj);
-					sendDataFun(sendData,"mark");
-				}
-				return obj;
-			}
-		}
 		NEM.measure=function(measureName,markStart,markEnd){
 			var markStart,markEnd,markStartTime,markEndTime,measureObj={};
-				var marksArr=this.marksArr;
-
-			if(measureName && measureName=="firstscreen"){
-				//首屏时间
-				NEM["firstscreen"]=(new Date().getTime()-NEM.config.clientStart)/1000;
-			}else if(measureName && measureName=="blankscreen"){
-				//白屏时间
-				NEM["blankscreen"]=(new Date().getTime()-NEM.config.clientStart)/1000;
-			}
+				var marksArr=NEM.marksArr;
 
 			if(measureName && (typeof measureName =="string") && markStart && (typeof markStart =="string")){
 
@@ -613,20 +587,30 @@
   			},
   			getBlankScreenTime:function(){
   				//白屏
-  				if(NEM.blankscreen){
+  				var blankscreen;
+  				for(var i=0,len=NEM.marksArr.length;i<len;i++){
+  					if(NEM.marksArr[i]["markName"]=="blankscreen"){
+  						blankscreen=NEM.marksArr[i]["time"];
+  					}
+  				}
+  				if(blankscreen){
   					var clientStart=NEM.config.clientStart;
-					var blankScreen=NEM.blankscreen;
-					return (blankScreen-clientStart)/1000;
+					return (blankscreen-clientStart)/1000;
   				}else{
   					return 0;
   				}
   			},
   			getFirstScreenTime:function(){
   				//首屏
-  				if(NEM.firstscreen){
+  				var firstscreen;
+  				for(var i=0,len=NEM.marksArr.length;i<len;i++){
+  					if(NEM.marksArr[i]["markName"]=="firstscreen"){
+  						firstscreen=NEM.marksArr[i]["time"];
+  					}
+  				}
+  				if(firstscreen){
   					var clientStart=NEM.config.clientStart;
-					var firstScreen=NEM.firstscreen;
-					return (firstScreen-clientStart)/1000;
+					return (firstscreen-clientStart)/1000;
   				}else{
   					return 0;
   				}
@@ -676,7 +660,7 @@
 				}else{
 					getEle("support").innerHTML="否";
 				}
-				// getEle("ua").innerHTML=timeData.ua;
+				getEle("ua").innerHTML=timeData.ua;
 				getEle("os").innerHTML=timeData.uostype+'/'+timeData.uosversion;
 				getEle("browser").innerHTML=timeData.ubrowsertype+'/'+timeData.ubrowserversion;
 				getEle("resolution").innerHTML=timeData.uresolution;
@@ -695,6 +679,19 @@
 				//发送采集数据
 				var sendData=util.obj2string(timeData);
 				sendDataFun(sendData,"resource");
+
+				//发送用户打点数据
+				for(var i=0,len=NEM.marksArr.length;i<len;i++){
+					if(NEM.marksArr[i] && typeof NEM.marksArr[i]){
+						if(NEM.marksArr[i]["send"]===true){
+							var obj={};
+							obj["markname"]=NEM.marksArr[i]["markName"];
+							obj["time"]=NEM.marksArr[i]["time"];
+							var sendData=util.obj2string(obj);
+							sendDataFun(sendData,"mark");
+						}
+					}
+				}
 
 			},20);
   		};	
