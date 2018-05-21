@@ -1,5 +1,9 @@
 <!DOCTYPE html>
-<html>
+
+
+  <html class="light page-post">
+
+
 <head>
   <meta charset="utf-8">
   
@@ -8,7 +12,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
   
-    <meta name="keywords" content="shirley,前端,设计,Hexo主题,前端开发,用户体验,设计,frontend,design,nodejs,JavaScript" />
+    <meta name="keywords" content="shirley,前端,设计,Hexo主题,前端开发,用户体验,设计,frontend,vuejs,nodejs,JavaScript" />
   
 
   <meta name="description" content="对于文中提到的一些观点还是持保留态度，之所以把这篇文章转载过来，并且置顶，是想给自己一些勉励，如果自己某天换工作，不想得到下面的一些评价。
@@ -27,7 +31,7 @@
 
 本文转载自博客园地址：http://www.cnblogs.com/vans/p/4550356.html
 今年一月份以前端主管的身份进入现在的公司，到现在为止陆陆续续面试了十几个应聘者，惊讶地发现前端这个细分岗位的市场行情竟如此奇怪，一方面是各种公司争">
-<meta property="og:updated_time" content="2016-08-03T09:05:45.000Z">
+<meta property="og:updated_time" content="2018-05-21T08:44:07.197Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="转载[前端，我为什么不要你]">
 <meta name="twitter:description" content="对于文中提到的一些观点还是持保留态度，之所以把这篇文章转载过来，并且置顶，是想给自己一些勉励，如果自己某天换工作，不想得到下面的一些评价。
@@ -36,84 +40,216 @@
 
 本文转载自博客园地址：http://www.cnblogs.com/vans/p/4550356.html
 今年一月份以前端主管的身份进入现在的公司，到现在为止陆陆续续面试了十几个应聘者，惊讶地发现前端这个细分岗位的市场行情竟如此奇怪，一方面是各种公司争">
-  
-  
 
   
 
+  
+    <link rel="icon" href="/favicon.ico">
+  
 
-  <link rel="stylesheet" href="/css/styles.css" type="text/css">
+  <link href="/css/styles.css?v=c114cbe6" rel="stylesheet">
 
+
+  
+    <link rel="stylesheet" href="/css/personal-style.css" type="text/css">
+  
+
+  
+
+  
+  <script type="text/javascript">
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "//hm.baidu.com/hm.js?57e94d016e201fba3603a8a2b0263af0";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
+
+
+  
+  <script type="text/javascript">
+	(function(){
+	    var bp = document.createElement('script');
+	    var curProtocol = window.location.protocol.split(':')[0];
+	    if (curProtocol === 'https') {
+	        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';        
+	    }
+	    else {
+	        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+	    }
+	    var s = document.getElementsByTagName("script")[0];
+	    s.parentNode.insertBefore(bp, s);
+	})();
+  </script>
+
+
+
+  
+    <script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+  
+
+  
+    <link rel="stylesheet" href="//cdn.bootcss.com/font-awesome/4.3.0/css/font-awesome.min.css">
+  
 </head>
 
 <body>
-  <div class="content-post">
+
+
+  
+    <span id="toolbox-mobile" class="toolbox-mobile">盒子</span>
+  
+
+  <div class="post-header CENTER">
+   
   <div class="toolbox">
-  <div class="home-entry">盒子</div>
-  <ul class="list-entry">
-    
+    <a class="toolbox-entry" href="/">
+      <span class="toolbox-entry-text">盒子</span>
+      <i class="icon-angle-down"></i>
+      <i class="icon-home"></i>
+    </a>
+    <ul class="list-toolbox">
       
-        <li class="item-entry">
-          <a href="/">首页</a>
+        <li class="item-toolbox">
+          <a
+            class="CIRCLE"
+            href="/archives/"
+            rel="noopener noreferrer"
+            target="_self"
+            >
+            博客
+          </a>
         </li>
       
-    
-      
-        <li class="item-entry">
-          <a href="/archives/">博客</a>
+        <li class="item-toolbox">
+          <a
+            class="CIRCLE"
+            href="/category/"
+            rel="noopener noreferrer"
+            target="_self"
+            >
+            分类
+          </a>
         </li>
       
-    
-      
-        <li class="item-entry">
-          <a href="/category/">分类</a>
+        <li class="item-toolbox">
+          <a
+            class="CIRCLE"
+            href="/tag/"
+            rel="noopener noreferrer"
+            target="_self"
+            >
+            标签
+          </a>
         </li>
       
-    
-      
-        <li class="item-entry">
-          <a href="/tags/">标签</a>
+        <li class="item-toolbox">
+          <a
+            class="CIRCLE"
+            href="/link/"
+            rel="noopener noreferrer"
+            target="_self"
+            >
+            友链
+          </a>
         </li>
       
-    
-      
-        <li class="item-entry">
-          <a href="/about/">关于</a>
+        <li class="item-toolbox">
+          <a
+            class="CIRCLE"
+            href="/about/"
+            rel="noopener noreferrer"
+            target="_self"
+            >
+            关于
+          </a>
         </li>
       
-    
-      
-        <li class="item-entry">
-          <a href="/atom.xml">RSS</a>
+        <li class="item-toolbox">
+          <a
+            class="CIRCLE"
+            href="/atom.xml"
+            rel="noopener noreferrer"
+            target="_blank"
+            >
+            RSS
+          </a>
         </li>
       
-    
-  </ul>
+        <li class="item-toolbox">
+          <a
+            class="CIRCLE"
+            href="/search/"
+            rel="noopener noreferrer"
+            target="_self"
+            >
+            搜索
+          </a>
+        </li>
+      
+    </ul>
+  </div>
+
+
 </div>
 
-  <article id="post-转载-前端，我为什么不要你" class="article article-type-post" itemscope itemprop="blogPost">
+
+  <div id="toc" class="toc-article">
+    <strong class="toc-title">文章目录</strong>
+    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#u4E00_u5E74_u7ECF_u9A8C_u91CD_u590D_u7528"><span class="toc-text">一年经验重复用</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#u6280_u672F_u80FD_u529B"><span class="toc-text">技术能力</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#u5E95_u5C42_u77E5_u8BC6"><span class="toc-text">底层知识</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#u4E13_u4E1A_u7D20_u517B"><span class="toc-text">专业素养</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#u603B_u7ED3"><span class="toc-text">总结</span></a></li></ol>
+  </div>
+
+
+
+<div class="content content-post CENTER">
+   <article id="post-转载-前端，我为什么不要你" class="article article-type-post" itemprop="blogPost">
   <header class="article-header">
     <h1 class="post-title">转载[前端，我为什么不要你]</h1>
 
     <div class="article-meta">
-      <span>2017-03-03</span>
-
-      <span> | </span>
-
-      <span class="article-author">Shirley Tan</span>
-
-      <span> | </span>
+      <span>
+        <i class="icon-calendar"></i>
+        <span>2017.03.03</span>
+      </span>
 
       
+        <span class="article-author">
+          <i class="icon-user"></i>
+          <span>Shirley Tan</span>
+        </span>
+      
 
+      
+  <span class="article-category">
+    <i class="icon-list"></i>
+    <a class="article-category-link" href="/categories/激励/">激励</a>
+  </span>
+
+
+
+      
+        <span>
+          <i class="icon-comment"></i>
+          <a href="http://tanxuewei.github.io/2017/03/03/转载-前端，我为什么不要你/#disqus_thread"></a>
+        </span>
+      
+
+      
+      <i class="fa fa-eye"></i> 
+        <span id="busuanzi_container_page_pv">
+           &nbsp热度 <span id="busuanzi_value_page_pv">
+           <i class="fa fa-spinner fa-spin"></i></span>℃
+        </span>
+      
+      
     </div>
   </header>
 
-  <div class="article-inner">
-
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p style="color: #f00;">对于文中提到的一些观点还是持保留态度，之所以把这篇文章转载过来，并且置顶，是想给自己一些勉励，如果自己某天换工作，不想得到下面的一些评价。</p>
+  <div class="article-content">
+    
+      <p style="color: #f00;">对于文中提到的一些观点还是持保留态度，之所以把这篇文章转载过来，并且置顶，是想给自己一些勉励，如果自己某天换工作，不想得到下面的一些评价。</p>
 
 
 
@@ -135,23 +271,229 @@
 <p>我们公司刚拿完投资，出手在行业里面算是阔绰的了，要求也不高，思维正常，沟通正常，态度端正，技术对得起工资就OK。我们是一个学习型团队，我们也相信每个人都有学习欲望及能力，所以如果看到有潜力的一样会招。我们是一个迅速发展的团队，项目奖，年终奖，五险一金，该有的都有，一经录用，待遇从优。</p>
 <p>唯一一条，我们不介意老，但是不要老油条。</p>
 
-      
-    </div>
-
     
-      
-
-    
-
   </div>
+
+  
+      <div class="git"></div>
+  
+
 </article>
+
+
+   
+  <div class="text-center donation">
+    <div class="inner-donation">
+      <span class="btn-donation">支持一下</span>
+      <div class="donation-body">
+        <div class="tip text-center">扫一扫，支持forsigner</div>
+        <ul>
+        
+          <li class="item">
+            <span>微信扫一扫</span>
+            <img src="/images/qr-wechat.png" alt="">
+          </li>
+        
+          <li class="item">
+            <span>支付宝扫一扫</span>
+            <img src="/images/qr-alipay.png" alt="">
+          </li>
+        
+        </ul>
+      </div>
+    </div>
+  </div>
+
+
+   
+  <div class="box-prev-next clearfix">
+    <a class="show pull-left" href="/2017/02/10/MVC、MVVM区别/">
+        <i class="icon icon-angle-left"></i>
+    </a>
+    <a class="show pull-right" href="/2018/05/21/一眨眼已2018/">
+        <i class="icon icon-angle-right"></i>
+    </a>
+  </div>
+
 
 
 
 </div>
 
-  
+
+  <a id="backTop" class="back-top">
+    <i class="icon-angle-up"></i>
+  </a>
+
+
+
+
+  <div class="modal" id="modal">
+  <span id="cover" class="cover hide"></span>
+  <div id="modal-dialog" class="modal-dialog hide-dialog">
+    <div class="modal-header">
+      <span id="close" class="btn-close">关闭</span>
+    </div>
+    <hr>
+    <div class="modal-body">
+      <ul class="list-toolbox">
+        
+          <li class="item-toolbox">
+            <a
+              class="CIRCLE"
+              href="/archives/"
+              rel="noopener noreferrer"
+              target="_self"
+              >
+              博客
+            </a>
+          </li>
+        
+          <li class="item-toolbox">
+            <a
+              class="CIRCLE"
+              href="/category/"
+              rel="noopener noreferrer"
+              target="_self"
+              >
+              分类
+            </a>
+          </li>
+        
+          <li class="item-toolbox">
+            <a
+              class="CIRCLE"
+              href="/tag/"
+              rel="noopener noreferrer"
+              target="_self"
+              >
+              标签
+            </a>
+          </li>
+        
+          <li class="item-toolbox">
+            <a
+              class="CIRCLE"
+              href="/link/"
+              rel="noopener noreferrer"
+              target="_self"
+              >
+              友链
+            </a>
+          </li>
+        
+          <li class="item-toolbox">
+            <a
+              class="CIRCLE"
+              href="/about/"
+              rel="noopener noreferrer"
+              target="_self"
+              >
+              关于
+            </a>
+          </li>
+        
+          <li class="item-toolbox">
+            <a
+              class="CIRCLE"
+              href="/atom.xml"
+              rel="noopener noreferrer"
+              target="_blank"
+              >
+              RSS
+            </a>
+          </li>
+        
+          <li class="item-toolbox">
+            <a
+              class="CIRCLE"
+              href="/search/"
+              rel="noopener noreferrer"
+              target="_self"
+              >
+              搜索
+            </a>
+          </li>
+        
+      </ul>
+
+    </div>
+  </div>
+</div>
+
+
 
   
+      <div class="fexo-comments comments-post">
+    
+  <section class="disqus-comments">
+    <div id="disqus_thread">
+      <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    </div>
+  </section>
+
+  <script>
+    var disqus_shortname = 'shirley';
+    
+    var disqus_url = 'http://tanxuewei.github.io/2017/03/03/转载-前端，我为什么不要你/';
+    
+    (function(){
+      var dsq = document.createElement('script');
+      dsq.type = 'text/javascript';
+      dsq.async = true;
+      dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+  </script>
+
+  <script id="dsq-count-scr" src="//shirley.disqus.com/count.js" async></script>
+
+
+
+    
+    
+
+    
+    
+
+    
+
+    
+    
+
+  </div>
+
+  
+
+  <script type="text/javascript">
+  function loadScript(url, callback) {
+    var script = document.createElement('script')
+    script.type = 'text/javascript';
+
+    if (script.readyState) { //IE
+      script.onreadystatechange = function() {
+        if (script.readyState == 'loaded' ||
+          script.readyState == 'complete') {
+          script.onreadystatechange = null;
+          callback();
+        }
+      };
+    } else { //Others
+      script.onload = function() {
+        callback();
+      };
+    }
+
+    script.src = url;
+    document.getElementsByTagName('head')[0].appendChild(script);
+  }
+
+  window.onload = function() {
+    loadScript('/js/bundle.js?235683', function() {
+      // load success
+    });
+  }
+</script>
+
 </body>
 </html>

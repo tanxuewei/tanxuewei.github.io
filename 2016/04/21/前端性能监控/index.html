@@ -1,5 +1,9 @@
 <!DOCTYPE html>
-<html>
+
+
+  <html class="light page-post">
+
+
 <head>
   <meta charset="utf-8">
   
@@ -8,7 +12,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
   
-    <meta name="keywords" content="shirley,前端,设计,Hexo主题,前端开发,用户体验,设计,frontend,design,nodejs,JavaScript" />
+    <meta name="keywords" content="shirley,前端,设计,Hexo主题,前端开发,用户体验,设计,frontend,vuejs,nodejs,JavaScript" />
   
 
   <meta name="description" content="性能监控指标1、访问信息    页面来源    操作系统版本，如win7,linux    浏览器类型，如chrome,firefox等    浏览器版本，如chrome50，ie6等    分辨率，如1920x1080    网络类型    访问时间    用户ip：服务端获得    用户地理位置：服务端获得    运营商信息：服务端获得2、性能    DNS时间    TCP连接时间    h">
@@ -21,103 +25,436 @@
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="前端性能监控">
 <meta name="twitter:description" content="性能监控指标1、访问信息    页面来源    操作系统版本，如win7,linux    浏览器类型，如chrome,firefox等    浏览器版本，如chrome50，ie6等    分辨率，如1920x1080    网络类型    访问时间    用户ip：服务端获得    用户地理位置：服务端获得    运营商信息：服务端获得2、性能    DNS时间    TCP连接时间    h">
-  
-  
 
   
 
+  
+    <link rel="icon" href="/favicon.ico">
+  
 
-  <link rel="stylesheet" href="/css/styles.css" type="text/css">
+  <link href="/css/styles.css?v=c114cbe6" rel="stylesheet">
 
+
+  
+    <link rel="stylesheet" href="/css/personal-style.css" type="text/css">
+  
+
+  
+
+  
+  <script type="text/javascript">
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "//hm.baidu.com/hm.js?57e94d016e201fba3603a8a2b0263af0";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
+
+
+  
+  <script type="text/javascript">
+	(function(){
+	    var bp = document.createElement('script');
+	    var curProtocol = window.location.protocol.split(':')[0];
+	    if (curProtocol === 'https') {
+	        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';        
+	    }
+	    else {
+	        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+	    }
+	    var s = document.getElementsByTagName("script")[0];
+	    s.parentNode.insertBefore(bp, s);
+	})();
+  </script>
+
+
+
+  
+    <script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+  
+
+  
+    <link rel="stylesheet" href="//cdn.bootcss.com/font-awesome/4.3.0/css/font-awesome.min.css">
+  
 </head>
 
 <body>
-  <div class="content-post">
+
+
+  
+    <span id="toolbox-mobile" class="toolbox-mobile">盒子</span>
+  
+
+  <div class="post-header CENTER">
+   
   <div class="toolbox">
-  <div class="home-entry">盒子</div>
-  <ul class="list-entry">
-    
+    <a class="toolbox-entry" href="/">
+      <span class="toolbox-entry-text">盒子</span>
+      <i class="icon-angle-down"></i>
+      <i class="icon-home"></i>
+    </a>
+    <ul class="list-toolbox">
       
-        <li class="item-entry">
-          <a href="/">首页</a>
+        <li class="item-toolbox">
+          <a
+            class="CIRCLE"
+            href="/archives/"
+            rel="noopener noreferrer"
+            target="_self"
+            >
+            博客
+          </a>
         </li>
       
-    
-      
-        <li class="item-entry">
-          <a href="/archives/">博客</a>
+        <li class="item-toolbox">
+          <a
+            class="CIRCLE"
+            href="/category/"
+            rel="noopener noreferrer"
+            target="_self"
+            >
+            分类
+          </a>
         </li>
       
-    
-      
-        <li class="item-entry">
-          <a href="/category/">分类</a>
+        <li class="item-toolbox">
+          <a
+            class="CIRCLE"
+            href="/tag/"
+            rel="noopener noreferrer"
+            target="_self"
+            >
+            标签
+          </a>
         </li>
       
-    
-      
-        <li class="item-entry">
-          <a href="/tags/">标签</a>
+        <li class="item-toolbox">
+          <a
+            class="CIRCLE"
+            href="/link/"
+            rel="noopener noreferrer"
+            target="_self"
+            >
+            友链
+          </a>
         </li>
       
-    
-      
-        <li class="item-entry">
-          <a href="/about/">关于</a>
+        <li class="item-toolbox">
+          <a
+            class="CIRCLE"
+            href="/about/"
+            rel="noopener noreferrer"
+            target="_self"
+            >
+            关于
+          </a>
         </li>
       
-    
-      
-        <li class="item-entry">
-          <a href="/atom.xml">RSS</a>
+        <li class="item-toolbox">
+          <a
+            class="CIRCLE"
+            href="/atom.xml"
+            rel="noopener noreferrer"
+            target="_blank"
+            >
+            RSS
+          </a>
         </li>
       
-    
-  </ul>
+        <li class="item-toolbox">
+          <a
+            class="CIRCLE"
+            href="/search/"
+            rel="noopener noreferrer"
+            target="_self"
+            >
+            搜索
+          </a>
+        </li>
+      
+    </ul>
+  </div>
+
+
 </div>
 
-  <article id="post-前端性能监控" class="article article-type-post" itemscope itemprop="blogPost">
+
+  <div id="toc" class="toc-article">
+    <strong class="toc-title">文章目录</strong>
+    <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#u6027_u80FD_u76D1_u63A7_u6307_u6807"><span class="toc-text">性能监控指标</span></a></li></ol>
+  </div>
+
+
+
+<div class="content content-post CENTER">
+   <article id="post-前端性能监控" class="article article-type-post" itemprop="blogPost">
   <header class="article-header">
     <h1 class="post-title">前端性能监控</h1>
 
     <div class="article-meta">
-      <span>2016-04-21</span>
+      <span>
+        <i class="icon-calendar"></i>
+        <span>2016.04.21</span>
+      </span>
 
-      <span> | </span>
-
-      <span class="article-author">Shirley Tan</span>
-
-      <span> | </span>
+      
+        <span class="article-author">
+          <i class="icon-user"></i>
+          <span>Shirley Tan</span>
+        </span>
+      
 
       
 
+
+      
+        <span>
+          <i class="icon-comment"></i>
+          <a href="http://tanxuewei.github.io/2016/04/21/前端性能监控/#disqus_thread"></a>
+        </span>
+      
+
+      
+      <i class="fa fa-eye"></i> 
+        <span id="busuanzi_container_page_pv">
+           &nbsp热度 <span id="busuanzi_value_page_pv">
+           <i class="fa fa-spinner fa-spin"></i></span>℃
+        </span>
+      
+      
     </div>
   </header>
 
-  <div class="article-inner">
-
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h3 id="u6027_u80FD_u76D1_u63A7_u6307_u6807"><a href="#u6027_u80FD_u76D1_u63A7_u6307_u6807" class="headerlink" title="性能监控指标"></a>性能监控指标</h3><p>1、访问信息<br>    页面来源<br>    操作系统版本，如win7,linux<br>    浏览器类型，如chrome,firefox等<br>    浏览器版本，如chrome50，ie6等<br>    分辨率，如1920x1080<br>    网络类型<br>    访问时间<br>    用户ip：服务端获得<br>    用户地理位置：服务端获得<br>    运营商信息：服务端获得<br>2、性能<br>    DNS时间<br>    TCP连接时间<br>    http请求时间<br>    http响应时间<br>    ajax时间<br>    白屏时间：用户从打开页面开始到页面开始有东西呈现为止，这过程中占用的时间就是白屏时间<br>    首屏时间：用户浏览器首屏内所有内容都呈现出来所花费的时间（这个计算时间不定，定一套自己的计算方法）<br>    用户可操作时间：用户可以进行正常的点击、输入等操作<br>    页面总下载时间：页面所有资源都加载完成并呈现出来所花的时间，即页面 onload 的时间<br>    静态资源下载时间（window.performance.getEntries）<br>    静态资源下载总数量（window.performance.getEntries）<br>3、js错误和异常（JS 的异常捕获只有两种方式：window.onerror、try/catch）<br>    错误发生时间<br>    错误message<br>    错误所在文件<br>    错误行号<br>    错误列号<br>    调用堆栈<br>    错误发生的浏览器</p>
+  <div class="article-content">
+    
+      <h3 id="u6027_u80FD_u76D1_u63A7_u6307_u6807"><a href="#u6027_u80FD_u76D1_u63A7_u6307_u6807" class="headerlink" title="性能监控指标"></a>性能监控指标</h3><p>1、访问信息<br>    页面来源<br>    操作系统版本，如win7,linux<br>    浏览器类型，如chrome,firefox等<br>    浏览器版本，如chrome50，ie6等<br>    分辨率，如1920x1080<br>    网络类型<br>    访问时间<br>    用户ip：服务端获得<br>    用户地理位置：服务端获得<br>    运营商信息：服务端获得<br>2、性能<br>    DNS时间<br>    TCP连接时间<br>    http请求时间<br>    http响应时间<br>    ajax时间<br>    白屏时间：用户从打开页面开始到页面开始有东西呈现为止，这过程中占用的时间就是白屏时间<br>    首屏时间：用户浏览器首屏内所有内容都呈现出来所花费的时间（这个计算时间不定，定一套自己的计算方法）<br>    用户可操作时间：用户可以进行正常的点击、输入等操作<br>    页面总下载时间：页面所有资源都加载完成并呈现出来所花的时间，即页面 onload 的时间<br>    静态资源下载时间（window.performance.getEntries）<br>    静态资源下载总数量（window.performance.getEntries）<br>3、js错误和异常（JS 的异常捕获只有两种方式：window.onerror、try/catch）<br>    错误发生时间<br>    错误message<br>    错误所在文件<br>    错误行号<br>    错误列号<br>    调用堆栈<br>    错误发生的浏览器</p>
 <p>参考文章：<br><a href="http://fex.baidu.com/blog/2014/05/front_end-data/" target="_blank" rel="external">1、前端数据之美 – 基础篇</a><br><a href="http://fex.baidu.com/blog/2014/05/build-performance-monitor-in-7-days/" target="_blank" rel="external">2、7天打造前端性能监控系统</a><br><a href="http://blog.codinglabs.org/articles/how-web-analytics-data-collection-system-work.html" target="_blank" rel="external">3、网站统计中的数据收集原理及实现</a><br><a href="http://ravikiranj.net/posts/2014/code/how-fix-cryptic-script-error-javascript/" target="_blank" rel="external">4、how to fix script error</a><br><a href="http://taobaofed.org/blog/2015/10/28/jstracker-how-to-collect-data/" target="_blank" rel="external">5、JSTracker：前端异常数据采集</a><br><a href="https://www.zhihu.com/question/37585246" target="_blank" rel="external">6、你是如何搭建 Web 前端性能监控系统的？</a><br><a href="http://web.jobbole.com/84264/" target="_blank" rel="external">7、使用性能API快速分析web前端性能</a></p>
 
-      
-    </div>
-
     
-      
-
-    
-
   </div>
+
+  
+      <div class="git"></div>
+  
+
 </article>
+
+
+   
+  <div class="text-center donation">
+    <div class="inner-donation">
+      <span class="btn-donation">支持一下</span>
+      <div class="donation-body">
+        <div class="tip text-center">扫一扫，支持forsigner</div>
+        <ul>
+        
+          <li class="item">
+            <span>微信扫一扫</span>
+            <img src="/images/qr-wechat.png" alt="">
+          </li>
+        
+          <li class="item">
+            <span>支付宝扫一扫</span>
+            <img src="/images/qr-alipay.png" alt="">
+          </li>
+        
+        </ul>
+      </div>
+    </div>
+  </div>
+
+
+   
+  <div class="box-prev-next clearfix">
+    <a class="show pull-left" href="/2016/04/19/Ajax一探究竟/">
+        <i class="icon icon-angle-left"></i>
+    </a>
+    <a class="show pull-right" href="/2016/04/26/闭包和作用域/">
+        <i class="icon icon-angle-right"></i>
+    </a>
+  </div>
+
 
 
 
 </div>
 
-  
+
+  <a id="backTop" class="back-top">
+    <i class="icon-angle-up"></i>
+  </a>
+
+
+
+
+  <div class="modal" id="modal">
+  <span id="cover" class="cover hide"></span>
+  <div id="modal-dialog" class="modal-dialog hide-dialog">
+    <div class="modal-header">
+      <span id="close" class="btn-close">关闭</span>
+    </div>
+    <hr>
+    <div class="modal-body">
+      <ul class="list-toolbox">
+        
+          <li class="item-toolbox">
+            <a
+              class="CIRCLE"
+              href="/archives/"
+              rel="noopener noreferrer"
+              target="_self"
+              >
+              博客
+            </a>
+          </li>
+        
+          <li class="item-toolbox">
+            <a
+              class="CIRCLE"
+              href="/category/"
+              rel="noopener noreferrer"
+              target="_self"
+              >
+              分类
+            </a>
+          </li>
+        
+          <li class="item-toolbox">
+            <a
+              class="CIRCLE"
+              href="/tag/"
+              rel="noopener noreferrer"
+              target="_self"
+              >
+              标签
+            </a>
+          </li>
+        
+          <li class="item-toolbox">
+            <a
+              class="CIRCLE"
+              href="/link/"
+              rel="noopener noreferrer"
+              target="_self"
+              >
+              友链
+            </a>
+          </li>
+        
+          <li class="item-toolbox">
+            <a
+              class="CIRCLE"
+              href="/about/"
+              rel="noopener noreferrer"
+              target="_self"
+              >
+              关于
+            </a>
+          </li>
+        
+          <li class="item-toolbox">
+            <a
+              class="CIRCLE"
+              href="/atom.xml"
+              rel="noopener noreferrer"
+              target="_blank"
+              >
+              RSS
+            </a>
+          </li>
+        
+          <li class="item-toolbox">
+            <a
+              class="CIRCLE"
+              href="/search/"
+              rel="noopener noreferrer"
+              target="_self"
+              >
+              搜索
+            </a>
+          </li>
+        
+      </ul>
+
+    </div>
+  </div>
+</div>
+
+
 
   
+      <div class="fexo-comments comments-post">
+    
+  <section class="disqus-comments">
+    <div id="disqus_thread">
+      <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    </div>
+  </section>
+
+  <script>
+    var disqus_shortname = 'shirley';
+    
+    var disqus_url = 'http://tanxuewei.github.io/2016/04/21/前端性能监控/';
+    
+    (function(){
+      var dsq = document.createElement('script');
+      dsq.type = 'text/javascript';
+      dsq.async = true;
+      dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+  </script>
+
+  <script id="dsq-count-scr" src="//shirley.disqus.com/count.js" async></script>
+
+
+
+    
+    
+
+    
+    
+
+    
+
+    
+    
+
+  </div>
+
+  
+
+  <script type="text/javascript">
+  function loadScript(url, callback) {
+    var script = document.createElement('script')
+    script.type = 'text/javascript';
+
+    if (script.readyState) { //IE
+      script.onreadystatechange = function() {
+        if (script.readyState == 'loaded' ||
+          script.readyState == 'complete') {
+          script.onreadystatechange = null;
+          callback();
+        }
+      };
+    } else { //Others
+      script.onload = function() {
+        callback();
+      };
+    }
+
+    script.src = url;
+    document.getElementsByTagName('head')[0].appendChild(script);
+  }
+
+  window.onload = function() {
+    loadScript('/js/bundle.js?235683', function() {
+      // load success
+    });
+  }
+</script>
+
 </body>
 </html>

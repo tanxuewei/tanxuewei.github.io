@@ -1,5 +1,9 @@
 <!DOCTYPE html>
-<html>
+
+
+  <html class="light page-post">
+
+
 <head>
   <meta charset="utf-8">
   
@@ -8,7 +12,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
   
-    <meta name="keywords" content="shirley,前端,设计,Hexo主题,前端开发,用户体验,设计,frontend,design,nodejs,JavaScript" />
+    <meta name="keywords" content="shirley,前端,设计,Hexo主题,前端开发,用户体验,设计,frontend,vuejs,nodejs,JavaScript" />
   
 
   <meta name="description" content="1、解忧杂货店12345东野奎吾 (2016.1.31 购于京东)(2016.03.05 -- 2016.04.03)自由对你来说，一切都是自由的，在你面前是无限的可能。如没有看懂，可以点击[这里](https://book.douban.com/review/7362523/)
@@ -24,106 +28,439 @@
 <meta name="twitter:title" content="2016读书单">
 <meta name="twitter:description" content="1、解忧杂货店12345东野奎吾 (2016.1.31 购于京东)(2016.03.05 -- 2016.04.03)自由对你来说，一切都是自由的，在你面前是无限的可能。如没有看懂，可以点击[这里](https://book.douban.com/review/7362523/)
 2、JavaScript DOM 编程艺术123Jeremy Keith等 (2016.03.29 购于京东)(201">
-  
-  
 
   
 
+  
+    <link rel="icon" href="/favicon.ico">
+  
 
-  <link rel="stylesheet" href="/css/styles.css" type="text/css">
+  <link href="/css/styles.css?v=c114cbe6" rel="stylesheet">
 
+
+  
+    <link rel="stylesheet" href="/css/personal-style.css" type="text/css">
+  
+
+  
+
+  
+  <script type="text/javascript">
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "//hm.baidu.com/hm.js?57e94d016e201fba3603a8a2b0263af0";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
+
+
+  
+  <script type="text/javascript">
+	(function(){
+	    var bp = document.createElement('script');
+	    var curProtocol = window.location.protocol.split(':')[0];
+	    if (curProtocol === 'https') {
+	        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';        
+	    }
+	    else {
+	        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+	    }
+	    var s = document.getElementsByTagName("script")[0];
+	    s.parentNode.insertBefore(bp, s);
+	})();
+  </script>
+
+
+
+  
+    <script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+  
+
+  
+    <link rel="stylesheet" href="//cdn.bootcss.com/font-awesome/4.3.0/css/font-awesome.min.css">
+  
 </head>
 
 <body>
-  <div class="content-post">
+
+
+  
+    <span id="toolbox-mobile" class="toolbox-mobile">盒子</span>
+  
+
+  <div class="post-header CENTER">
+   
   <div class="toolbox">
-  <div class="home-entry">盒子</div>
-  <ul class="list-entry">
-    
+    <a class="toolbox-entry" href="/">
+      <span class="toolbox-entry-text">盒子</span>
+      <i class="icon-angle-down"></i>
+      <i class="icon-home"></i>
+    </a>
+    <ul class="list-toolbox">
       
-        <li class="item-entry">
-          <a href="/">首页</a>
+        <li class="item-toolbox">
+          <a
+            class="CIRCLE"
+            href="/archives/"
+            rel="noopener noreferrer"
+            target="_self"
+            >
+            博客
+          </a>
         </li>
       
-    
-      
-        <li class="item-entry">
-          <a href="/archives/">博客</a>
+        <li class="item-toolbox">
+          <a
+            class="CIRCLE"
+            href="/category/"
+            rel="noopener noreferrer"
+            target="_self"
+            >
+            分类
+          </a>
         </li>
       
-    
-      
-        <li class="item-entry">
-          <a href="/category/">分类</a>
+        <li class="item-toolbox">
+          <a
+            class="CIRCLE"
+            href="/tag/"
+            rel="noopener noreferrer"
+            target="_self"
+            >
+            标签
+          </a>
         </li>
       
-    
-      
-        <li class="item-entry">
-          <a href="/tags/">标签</a>
+        <li class="item-toolbox">
+          <a
+            class="CIRCLE"
+            href="/link/"
+            rel="noopener noreferrer"
+            target="_self"
+            >
+            友链
+          </a>
         </li>
       
-    
-      
-        <li class="item-entry">
-          <a href="/about/">关于</a>
+        <li class="item-toolbox">
+          <a
+            class="CIRCLE"
+            href="/about/"
+            rel="noopener noreferrer"
+            target="_self"
+            >
+            关于
+          </a>
         </li>
       
-    
-      
-        <li class="item-entry">
-          <a href="/atom.xml">RSS</a>
+        <li class="item-toolbox">
+          <a
+            class="CIRCLE"
+            href="/atom.xml"
+            rel="noopener noreferrer"
+            target="_blank"
+            >
+            RSS
+          </a>
         </li>
       
-    
-  </ul>
+        <li class="item-toolbox">
+          <a
+            class="CIRCLE"
+            href="/search/"
+            rel="noopener noreferrer"
+            target="_self"
+            >
+            搜索
+          </a>
+        </li>
+      
+    </ul>
+  </div>
+
+
 </div>
 
-  <article id="post-2016读书单" class="article article-type-post" itemscope itemprop="blogPost">
+
+  <div id="toc" class="toc-article">
+    <strong class="toc-title">文章目录</strong>
+    <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#1_u3001_u89E3_u5FE7_u6742_u8D27_u5E97"><span class="toc-text">1、解忧杂货店</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2_u3001JavaScript_DOM__u7F16_u7A0B_u827A_u672F"><span class="toc-text">2、JavaScript DOM 编程艺术</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3_u3001_u770B_u89C1"><span class="toc-text">3、看见</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4_u3001_u97E9_u56FD_u8BED_u53E3_u8BED_u5165_u95E8"><span class="toc-text">4、韩国语口语入门</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5_u3001JavaScript_u9AD8_u7EA7_u7A0B_u5E8F_u8BBE_u8BA1"><span class="toc-text">5、JavaScript高级程序设计</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#6_u3001_u5929_u624D_u5728_u5DE6_uFF0C_u75AF_u5B50_u5728_u53F3"><span class="toc-text">6、天才在左，疯子在右</span></a></li></ol>
+  </div>
+
+
+
+<div class="content content-post CENTER">
+   <article id="post-2016读书单" class="article article-type-post" itemprop="blogPost">
   <header class="article-header">
     <h1 class="post-title">2016读书单</h1>
 
     <div class="article-meta">
-      <span>2016-04-11</span>
+      <span>
+        <i class="icon-calendar"></i>
+        <span>2016.04.11</span>
+      </span>
 
-      <span> | </span>
-
-      <span class="article-author">Shirley Tan</span>
-
-      <span> | </span>
+      
+        <span class="article-author">
+          <i class="icon-user"></i>
+          <span>Shirley Tan</span>
+        </span>
+      
 
       
 
+
+      
+        <span>
+          <i class="icon-comment"></i>
+          <a href="http://tanxuewei.github.io/2016/04/11/2016读书单/#disqus_thread"></a>
+        </span>
+      
+
+      
+      <i class="fa fa-eye"></i> 
+        <span id="busuanzi_container_page_pv">
+           &nbsp热度 <span id="busuanzi_value_page_pv">
+           <i class="fa fa-spinner fa-spin"></i></span>℃
+        </span>
+      
+      
     </div>
   </header>
 
-  <div class="article-inner">
-
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h3 id="1_u3001_u89E3_u5FE7_u6742_u8D27_u5E97"><a href="#1_u3001_u89E3_u5FE7_u6742_u8D27_u5E97" class="headerlink" title="1、解忧杂货店"></a><a href="https://book.douban.com/subject/25862578/" target="_blank" rel="external">1、解忧杂货店</a></h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">东野奎吾 (<span class="number">2016.1</span>.<span class="number">31</span> 购于京东)</span><br><span class="line">(<span class="number">2016.03</span>.<span class="number">05</span> -- <span class="number">2016.04</span>.<span class="number">03</span>)</span><br><span class="line">自由</span><br><span class="line">对你来说，一切都是自由的，在你面前是无限的可能。</span><br><span class="line">如没有看懂，可以点击[这里](https://book.douban.com/review/<span class="number">7362523</span>/)</span><br></pre></td></tr></table></figure>
+  <div class="article-content">
+    
+      <h3 id="1_u3001_u89E3_u5FE7_u6742_u8D27_u5E97"><a href="#1_u3001_u89E3_u5FE7_u6742_u8D27_u5E97" class="headerlink" title="1、解忧杂货店"></a><a href="https://book.douban.com/subject/25862578/" target="_blank" rel="external">1、解忧杂货店</a></h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">东野奎吾 (<span class="number">2016.1</span>.<span class="number">31</span> 购于京东)</span><br><span class="line">(<span class="number">2016.03</span>.<span class="number">05</span> -- <span class="number">2016.04</span>.<span class="number">03</span>)</span><br><span class="line">自由</span><br><span class="line">对你来说，一切都是自由的，在你面前是无限的可能。</span><br><span class="line">如没有看懂，可以点击[这里](https://book.douban.com/review/<span class="number">7362523</span>/)</span><br></pre></td></tr></table></figure>
 <h3 id="2_u3001JavaScript_DOM__u7F16_u7A0B_u827A_u672F"><a href="#2_u3001JavaScript_DOM__u7F16_u7A0B_u827A_u672F" class="headerlink" title="2、JavaScript DOM 编程艺术"></a><a href="https://book.douban.com/subject/6038371/" target="_blank" rel="external">2、JavaScript DOM 编程艺术</a></h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">Jeremy Keith等 (<span class="number">2016.03</span>.<span class="number">29</span> 购于京东)</span><br><span class="line">(<span class="number">2016</span>-<span class="number">04</span>-<span class="number">01</span> -- <span class="number">2016</span>...)</span><br><span class="line">男神推荐的基础好书，要认真研读，么么哒</span><br></pre></td></tr></table></figure>
 <h3 id="3_u3001_u770B_u89C1"><a href="#3_u3001_u770B_u89C1" class="headerlink" title="3、看见"></a><a href="https://book.douban.com/subject/20427187/" target="_blank" rel="external">3、看见</a></h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">柴静  (<span class="number">2015.3</span>.<span class="number">1</span> 购于京东)</span><br><span class="line">(<span class="number">2016</span>-<span class="number">04</span>-<span class="number">09</span> -- <span class="number">2016</span>...)</span><br><span class="line">想象另一种可能</span><br></pre></td></tr></table></figure>
 <h3 id="4_u3001_u97E9_u56FD_u8BED_u53E3_u8BED_u5165_u95E8"><a href="#4_u3001_u97E9_u56FD_u8BED_u53E3_u8BED_u5165_u95E8" class="headerlink" title="4、韩国语口语入门"></a><a href="/">4、韩国语口语入门</a></h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">周敏静赠送</span><br><span class="line">(<span class="number">2016</span>-<span class="number">04</span>-<span class="number">11</span> -- <span class="number">2016</span>...)</span><br><span class="line">暂时复习了前<span class="number">2</span>章</span><br></pre></td></tr></table></figure>
 <h3 id="5_u3001JavaScript_u9AD8_u7EA7_u7A0B_u5E8F_u8BBE_u8BA1"><a href="#5_u3001JavaScript_u9AD8_u7EA7_u7A0B_u5E8F_u8BBE_u8BA1" class="headerlink" title="5、JavaScript高级程序设计"></a><a href="/">5、JavaScript高级程序设计</a></h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">Nicholas C.Zakas (<span class="number">2016.04</span>.<span class="number">11</span> 购于京东)</span><br><span class="line">(<span class="number">2016</span>-<span class="number">04</span>-<span class="number">11</span> -- <span class="number">2016</span>...)</span><br><span class="line">因工作在做消息模块，只阅读了序</span><br></pre></td></tr></table></figure>
 <h3 id="6_u3001_u5929_u624D_u5728_u5DE6_uFF0C_u75AF_u5B50_u5728_u53F3"><a href="#6_u3001_u5929_u624D_u5728_u5DE6_uFF0C_u75AF_u5B50_u5728_u53F3" class="headerlink" title="6、天才在左，疯子在右"></a><a href="/">6、天才在左，疯子在右</a></h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"> (<span class="number">2016.04</span>.<span class="number">11</span> 购于京东)</span><br><span class="line">(<span class="number">2016</span>-<span class="number">05</span>-<span class="number">02</span> -- <span class="number">2016</span>...)</span><br></pre></td></tr></table></figure>
-      
-    </div>
-
     
-      
-
-    
-
   </div>
+
+  
+      <div class="git"></div>
+  
+
 </article>
+
+
+   
+  <div class="text-center donation">
+    <div class="inner-donation">
+      <span class="btn-donation">支持一下</span>
+      <div class="donation-body">
+        <div class="tip text-center">扫一扫，支持forsigner</div>
+        <ul>
+        
+          <li class="item">
+            <span>微信扫一扫</span>
+            <img src="/images/qr-wechat.png" alt="">
+          </li>
+        
+          <li class="item">
+            <span>支付宝扫一扫</span>
+            <img src="/images/qr-alipay.png" alt="">
+          </li>
+        
+        </ul>
+      </div>
+    </div>
+  </div>
+
+
+   
+  <div class="box-prev-next clearfix">
+    <a class="show pull-left" href="/2016/04/11/读-JavaScript-DOM-编程艺术-笔记/">
+        <i class="icon icon-angle-left"></i>
+    </a>
+    <a class="show pull-right" href="/2016/04/12/我稀饭的前端资源网站/">
+        <i class="icon icon-angle-right"></i>
+    </a>
+  </div>
+
 
 
 
 </div>
 
-  
+
+  <a id="backTop" class="back-top">
+    <i class="icon-angle-up"></i>
+  </a>
+
+
+
+
+  <div class="modal" id="modal">
+  <span id="cover" class="cover hide"></span>
+  <div id="modal-dialog" class="modal-dialog hide-dialog">
+    <div class="modal-header">
+      <span id="close" class="btn-close">关闭</span>
+    </div>
+    <hr>
+    <div class="modal-body">
+      <ul class="list-toolbox">
+        
+          <li class="item-toolbox">
+            <a
+              class="CIRCLE"
+              href="/archives/"
+              rel="noopener noreferrer"
+              target="_self"
+              >
+              博客
+            </a>
+          </li>
+        
+          <li class="item-toolbox">
+            <a
+              class="CIRCLE"
+              href="/category/"
+              rel="noopener noreferrer"
+              target="_self"
+              >
+              分类
+            </a>
+          </li>
+        
+          <li class="item-toolbox">
+            <a
+              class="CIRCLE"
+              href="/tag/"
+              rel="noopener noreferrer"
+              target="_self"
+              >
+              标签
+            </a>
+          </li>
+        
+          <li class="item-toolbox">
+            <a
+              class="CIRCLE"
+              href="/link/"
+              rel="noopener noreferrer"
+              target="_self"
+              >
+              友链
+            </a>
+          </li>
+        
+          <li class="item-toolbox">
+            <a
+              class="CIRCLE"
+              href="/about/"
+              rel="noopener noreferrer"
+              target="_self"
+              >
+              关于
+            </a>
+          </li>
+        
+          <li class="item-toolbox">
+            <a
+              class="CIRCLE"
+              href="/atom.xml"
+              rel="noopener noreferrer"
+              target="_blank"
+              >
+              RSS
+            </a>
+          </li>
+        
+          <li class="item-toolbox">
+            <a
+              class="CIRCLE"
+              href="/search/"
+              rel="noopener noreferrer"
+              target="_self"
+              >
+              搜索
+            </a>
+          </li>
+        
+      </ul>
+
+    </div>
+  </div>
+</div>
+
+
 
   
+      <div class="fexo-comments comments-post">
+    
+  <section class="disqus-comments">
+    <div id="disqus_thread">
+      <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    </div>
+  </section>
+
+  <script>
+    var disqus_shortname = 'shirley';
+    
+    var disqus_url = 'http://tanxuewei.github.io/2016/04/11/2016读书单/';
+    
+    (function(){
+      var dsq = document.createElement('script');
+      dsq.type = 'text/javascript';
+      dsq.async = true;
+      dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+  </script>
+
+  <script id="dsq-count-scr" src="//shirley.disqus.com/count.js" async></script>
+
+
+
+    
+    
+
+    
+    
+
+    
+
+    
+    
+
+  </div>
+
+  
+
+  <script type="text/javascript">
+  function loadScript(url, callback) {
+    var script = document.createElement('script')
+    script.type = 'text/javascript';
+
+    if (script.readyState) { //IE
+      script.onreadystatechange = function() {
+        if (script.readyState == 'loaded' ||
+          script.readyState == 'complete') {
+          script.onreadystatechange = null;
+          callback();
+        }
+      };
+    } else { //Others
+      script.onload = function() {
+        callback();
+      };
+    }
+
+    script.src = url;
+    document.getElementsByTagName('head')[0].appendChild(script);
+  }
+
+  window.onload = function() {
+    loadScript('/js/bundle.js?235683', function() {
+      // load success
+    });
+  }
+</script>
+
 </body>
 </html>

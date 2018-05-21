@@ -1,5 +1,9 @@
 <!DOCTYPE html>
-<html>
+
+
+  <html class="light page-post">
+
+
 <head>
   <meta charset="utf-8">
   
@@ -8,7 +12,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
   
-    <meta name="keywords" content="shirley,前端,设计,Hexo主题,前端开发,用户体验,设计,frontend,design,nodejs,JavaScript" />
+    <meta name="keywords" content="shirley,前端,设计,Hexo主题,前端开发,用户体验,设计,frontend,vuejs,nodejs,JavaScript" />
   
 
   <meta name="description" content="1.只会用百度？来看这个帮你高效工作的信息搜集及管理术1超有用的搜索归纳整理技术
@@ -36,84 +40,211 @@
 4.前端的自我成长1如何成为大神，在此一举啦
 5.JS一定要放在Body的最底部么？聊聊浏览器的渲染机制1浏览器渲染
 6.一探前端开发中的JS调试技巧1c">
-  
-  
 
   
 
+  
+    <link rel="icon" href="/favicon.ico">
+  
 
-  <link rel="stylesheet" href="/css/styles.css" type="text/css">
+  <link href="/css/styles.css?v=c114cbe6" rel="stylesheet">
 
+
+  
+    <link rel="stylesheet" href="/css/personal-style.css" type="text/css">
+  
+
+  
+
+  
+  <script type="text/javascript">
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "//hm.baidu.com/hm.js?57e94d016e201fba3603a8a2b0263af0";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
+
+
+  
+  <script type="text/javascript">
+	(function(){
+	    var bp = document.createElement('script');
+	    var curProtocol = window.location.protocol.split(':')[0];
+	    if (curProtocol === 'https') {
+	        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';        
+	    }
+	    else {
+	        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+	    }
+	    var s = document.getElementsByTagName("script")[0];
+	    s.parentNode.insertBefore(bp, s);
+	})();
+  </script>
+
+
+
+  
+    <script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+  
+
+  
+    <link rel="stylesheet" href="//cdn.bootcss.com/font-awesome/4.3.0/css/font-awesome.min.css">
+  
 </head>
 
 <body>
-  <div class="content-post">
+
+
+  
+    <span id="toolbox-mobile" class="toolbox-mobile">盒子</span>
+  
+
+  <div class="post-header CENTER">
+   
   <div class="toolbox">
-  <div class="home-entry">盒子</div>
-  <ul class="list-entry">
-    
+    <a class="toolbox-entry" href="/">
+      <span class="toolbox-entry-text">盒子</span>
+      <i class="icon-angle-down"></i>
+      <i class="icon-home"></i>
+    </a>
+    <ul class="list-toolbox">
       
-        <li class="item-entry">
-          <a href="/">首页</a>
+        <li class="item-toolbox">
+          <a
+            class="CIRCLE"
+            href="/archives/"
+            rel="noopener noreferrer"
+            target="_self"
+            >
+            博客
+          </a>
         </li>
       
-    
-      
-        <li class="item-entry">
-          <a href="/archives/">博客</a>
+        <li class="item-toolbox">
+          <a
+            class="CIRCLE"
+            href="/category/"
+            rel="noopener noreferrer"
+            target="_self"
+            >
+            分类
+          </a>
         </li>
       
-    
-      
-        <li class="item-entry">
-          <a href="/category/">分类</a>
+        <li class="item-toolbox">
+          <a
+            class="CIRCLE"
+            href="/tag/"
+            rel="noopener noreferrer"
+            target="_self"
+            >
+            标签
+          </a>
         </li>
       
-    
-      
-        <li class="item-entry">
-          <a href="/tags/">标签</a>
+        <li class="item-toolbox">
+          <a
+            class="CIRCLE"
+            href="/link/"
+            rel="noopener noreferrer"
+            target="_self"
+            >
+            友链
+          </a>
         </li>
       
-    
-      
-        <li class="item-entry">
-          <a href="/about/">关于</a>
+        <li class="item-toolbox">
+          <a
+            class="CIRCLE"
+            href="/about/"
+            rel="noopener noreferrer"
+            target="_self"
+            >
+            关于
+          </a>
         </li>
       
-    
-      
-        <li class="item-entry">
-          <a href="/atom.xml">RSS</a>
+        <li class="item-toolbox">
+          <a
+            class="CIRCLE"
+            href="/atom.xml"
+            rel="noopener noreferrer"
+            target="_blank"
+            >
+            RSS
+          </a>
         </li>
       
-    
-  </ul>
+        <li class="item-toolbox">
+          <a
+            class="CIRCLE"
+            href="/search/"
+            rel="noopener noreferrer"
+            target="_self"
+            >
+            搜索
+          </a>
+        </li>
+      
+    </ul>
+  </div>
+
+
 </div>
 
-  <article id="post-微信上推送的好文章" class="article article-type-post" itemscope itemprop="blogPost">
+
+  <div id="toc" class="toc-article">
+    <strong class="toc-title">文章目录</strong>
+    <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-_u53EA_u4F1A_u7528_u767E_u5EA6_uFF1F_u6765_u770B_u8FD9_u4E2A_u5E2E_u4F60_u9AD8_u6548_u5DE5_u4F5C_u7684_u4FE1_u606F_u641C_u96C6_u53CA_u7BA1_u7406_u672F"><span class="toc-text">1.只会用百度？来看这个帮你高效工作的信息搜集及管理术</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-_u524D_u7AEF_u6846_u67B6Regularjs_u7684_u8BBE_u8BA1_u4E0E_u9009_u578B_u4E4B_u8DEF_uFF0C_u7F51_u6613_u676D_u7814_u6280_u672F_u4E13_u5BB6_u5728ITA1024_u524D_u7AEF_u7CBE_u82F1_u7FA4_u7684_u5206_u4EAB"><span class="toc-text">2.前端框架Regularjs的设计与选型之路，网易杭研技术专家在ITA1024前端精英群的分享</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-JavaScript_u6838_u5FC3"><span class="toc-text">3.JavaScript核心</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-_u524D_u7AEF_u7684_u81EA_u6211_u6210_u957F"><span class="toc-text">4.前端的自我成长</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#5-JS_u4E00_u5B9A_u8981_u653E_u5728Body_u7684_u6700_u5E95_u90E8_u4E48_uFF1F_u804A_u804A_u6D4F_u89C8_u5668_u7684_u6E32_u67D3_u673A_u5236"><span class="toc-text">5.JS一定要放在Body的最底部么？聊聊浏览器的渲染机制</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#6-_u4E00_u63A2_u524D_u7AEF_u5F00_u53D1_u4E2D_u7684JS_u8C03_u8BD5_u6280_u5DE7"><span class="toc-text">6.一探前端开发中的JS调试技巧</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#6-_u5173_u4E8E_u524D_u7AEF_u7684_u601D_u8003_u4E0E_u611F_u609F"><span class="toc-text">6.关于前端的思考与感悟</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#7_u3001_u8FD9_u53EF_u80FD_u662F_u53F2_u4E0A_u6700_u5168_u7684CSS_u81EA_u9002_u5E94_u5E03_u5C40_u603B_u7ED3"><span class="toc-text">7、这可能是史上最全的CSS自适应布局总结</span></a></li></ol>
+  </div>
+
+
+
+<div class="content content-post CENTER">
+   <article id="post-微信上推送的好文章" class="article article-type-post" itemprop="blogPost">
   <header class="article-header">
     <h1 class="post-title">微信上推送的好文章</h1>
 
     <div class="article-meta">
-      <span>2016-04-07</span>
+      <span>
+        <i class="icon-calendar"></i>
+        <span>2016.04.07</span>
+      </span>
 
-      <span> | </span>
-
-      <span class="article-author">Shirley Tan</span>
-
-      <span> | </span>
+      
+        <span class="article-author">
+          <i class="icon-user"></i>
+          <span>Shirley Tan</span>
+        </span>
+      
 
       
 
+
+      
+        <span>
+          <i class="icon-comment"></i>
+          <a href="http://tanxuewei.github.io/2016/04/07/微信上推送的好文章/#disqus_thread"></a>
+        </span>
+      
+
+      
+      <i class="fa fa-eye"></i> 
+        <span id="busuanzi_container_page_pv">
+           &nbsp热度 <span id="busuanzi_value_page_pv">
+           <i class="fa fa-spinner fa-spin"></i></span>℃
+        </span>
+      
+      
     </div>
   </header>
 
-  <div class="article-inner">
-
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h3 id="1-_u53EA_u4F1A_u7528_u767E_u5EA6_uFF1F_u6765_u770B_u8FD9_u4E2A_u5E2E_u4F60_u9AD8_u6548_u5DE5_u4F5C_u7684_u4FE1_u606F_u641C_u96C6_u53CA_u7BA1_u7406_u672F"><a href="#1-_u53EA_u4F1A_u7528_u767E_u5EA6_uFF1F_u6765_u770B_u8FD9_u4E2A_u5E2E_u4F60_u9AD8_u6548_u5DE5_u4F5C_u7684_u4FE1_u606F_u641C_u96C6_u53CA_u7BA1_u7406_u672F" class="headerlink" title="1.只会用百度？来看这个帮你高效工作的信息搜集及管理术"></a><a href="https://mp.weixin.qq.com/s?__biz=MjM5NDQ5MzY3MQ==&amp;mid=402477597&amp;idx=1&amp;sn=2fa42b767353e344ae602e4b489a447b&amp;scene=1&amp;srcid=0407iCbtpgzSoL9HZGnwHmXN&amp;pass_ticket=tAGSpFw%2FWr7x%2FxLgIPRANP2qny84bIgXU5%2Fr%2FS%2F0hSpVUF8juAJDmTiLCahlExrh#rd" target="_blank" rel="external">1.只会用百度？来看这个帮你高效工作的信息搜集及管理术</a></h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">超有用的搜索归纳整理技术</span><br></pre></td></tr></table></figure>
+  <div class="article-content">
+    
+      <h3 id="1-_u53EA_u4F1A_u7528_u767E_u5EA6_uFF1F_u6765_u770B_u8FD9_u4E2A_u5E2E_u4F60_u9AD8_u6548_u5DE5_u4F5C_u7684_u4FE1_u606F_u641C_u96C6_u53CA_u7BA1_u7406_u672F"><a href="#1-_u53EA_u4F1A_u7528_u767E_u5EA6_uFF1F_u6765_u770B_u8FD9_u4E2A_u5E2E_u4F60_u9AD8_u6548_u5DE5_u4F5C_u7684_u4FE1_u606F_u641C_u96C6_u53CA_u7BA1_u7406_u672F" class="headerlink" title="1.只会用百度？来看这个帮你高效工作的信息搜集及管理术"></a><a href="https://mp.weixin.qq.com/s?__biz=MjM5NDQ5MzY3MQ==&amp;mid=402477597&amp;idx=1&amp;sn=2fa42b767353e344ae602e4b489a447b&amp;scene=1&amp;srcid=0407iCbtpgzSoL9HZGnwHmXN&amp;pass_ticket=tAGSpFw%2FWr7x%2FxLgIPRANP2qny84bIgXU5%2Fr%2FS%2F0hSpVUF8juAJDmTiLCahlExrh#rd" target="_blank" rel="external">1.只会用百度？来看这个帮你高效工作的信息搜集及管理术</a></h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">超有用的搜索归纳整理技术</span><br></pre></td></tr></table></figure>
 <h3 id="2-_u524D_u7AEF_u6846_u67B6Regularjs_u7684_u8BBE_u8BA1_u4E0E_u9009_u578B_u4E4B_u8DEF_uFF0C_u7F51_u6613_u676D_u7814_u6280_u672F_u4E13_u5BB6_u5728ITA1024_u524D_u7AEF_u7CBE_u82F1_u7FA4_u7684_u5206_u4EAB"><a href="#2-_u524D_u7AEF_u6846_u67B6Regularjs_u7684_u8BBE_u8BA1_u4E0E_u9009_u578B_u4E4B_u8DEF_uFF0C_u7F51_u6613_u676D_u7814_u6280_u672F_u4E13_u5BB6_u5728ITA1024_u524D_u7AEF_u7CBE_u82F1_u7FA4_u7684_u5206_u4EAB" class="headerlink" title="2.前端框架Regularjs的设计与选型之路，网易杭研技术专家在ITA1024前端精英群的分享"></a><a href="https://mp.weixin.qq.com/s?__biz=MzIzMzEzODYwOA==&mid=417766948&idx=1&sn=e948a6e350ab7fccf0dc044e9fcf979a&scene=1&srcid=0406XBsJHnqiA8vhD3ur6jcz&key=710a5d99946419d96bce0a5c12f7fda46a9a96189ac099039e1c3c1d5931e091094f82dd43731f98a7aeb31ba8293cd0&ascene=0&uin=NjgxMDc4NzQw&devicetype=iMac+MacBookPro12%2C1+OSX+OSX+10.10.5+build(14F27)&version=11020201&pass_ticket=PAqdybFI4pVb98ioV25VF1dK30RmSWvET80%2BQiRgls9UlqOcN32s9lrj4QfRe8aP" target="_blank" rel="external">2.前端框架Regularjs的设计与选型之路，网易杭研技术专家在ITA1024前端精英群的分享</a></h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">海波男神的regular分享</span><br></pre></td></tr></table></figure>
 <h3 id="3-JavaScript_u6838_u5FC3"><a href="#3-JavaScript_u6838_u5FC3" class="headerlink" title="3.JavaScript核心"></a><a href="https://mp.weixin.qq.com/s?__biz=MjM5MTA1MjAxMQ==&mid=402446684&idx=1&sn=587c1bc6318b893be71c9fb4e6a538fd&scene=1&srcid=0322YxccOnbFQhULBEbiWGjB&key=710a5d99946419d95cd5af9df5ec89f5c31c685067a414b04c018d2b93f6ff6d3f167399c1fa38ea8c1cced397de4c82&ascene=0&uin=NjgxMDc4NzQw&devicetype=iMac+MacBookPro12%2C1+OSX+OSX+10.10.5+build(14F27)&version=11020201&pass_ticket=MZOcKzTJv6f%2B7BvvSIMq%2BTlEnGoxo5FD8ehXQTouOnGo9yl3dC7fQTo%2FJPl%2B0rd7" target="_blank" rel="external">3.JavaScript核心</a></h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">js</span><br></pre></td></tr></table></figure>
 <h3 id="4-_u524D_u7AEF_u7684_u81EA_u6211_u6210_u957F"><a href="#4-_u524D_u7AEF_u7684_u81EA_u6211_u6210_u957F" class="headerlink" title="4.前端的自我成长"></a><a href="https://mp.weixin.qq.com/s?__biz=MjM5MTA1MjAxMQ==&mid=402496728&idx=1&sn=51b59a0c0533c1893ac58af0e45cfd9a&scene=1&srcid=0329WU5eDzIxHXMq8akzymvG&key=710a5d99946419d9cdf6b2ae935674bb1d6476324abb1e3027013f85fe25d1513c57edccec09b3fe44b594e9f3e86bbf&ascene=0&uin=NjgxMDc4NzQw&devicetype=iMac+MacBookPro12%2C1+OSX+OSX+10.10.5+build(14F27)&version=11020201&pass_ticket=JAMxoo%2BAHLc1F%2FarMGZWWof1vpBV%2FejS4VOIFERicQ%2Bu7YHpdwJWASIHo2aRbfvH" target="_blank" rel="external">4.前端的自我成长</a></h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">如何成为大神，在此一举啦</span><br></pre></td></tr></table></figure>
@@ -122,23 +253,229 @@
 <h3 id="6-_u5173_u4E8E_u524D_u7AEF_u7684_u601D_u8003_u4E0E_u611F_u609F"><a href="#6-_u5173_u4E8E_u524D_u7AEF_u7684_u601D_u8003_u4E0E_u611F_u609F" class="headerlink" title="6.关于前端的思考与感悟"></a><a href="https://mp.weixin.qq.com/s?__biz=MjM5MTA1MjAxMQ==&mid=2651220481&idx=1&sn=5225699c64d1fee29154fc5fc4a9ad86&scene=1&srcid=05022Azaqk8QBKwNWaXVNVIz&key=b28b03434249256b45fdb0a0fc7dc1b318afa68faa0bd7f71b27e3f45f88315e8475e3a87b6d107ca3fcffab76284e41&ascene=0&uin=NjgxMDc4NzQw&devicetype=iMac+MacBookPro12%2C1+OSX+OSX+10.10.5+build(14F27)&version=11020201&pass_ticket=L2awqbKiOlJ%2BtJlmSjMvVuGewZF7tRBcE41cHChANdDnoTtuwOoSsyOV7H8Gzqaz" target="_blank" rel="external">6.关于前端的思考与感悟</a></h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">什么心态会影响自己的进步？不坚定</span><br><span class="line">慢慢来，才最快</span><br></pre></td></tr></table></figure>
 <h3 id="7_u3001_u8FD9_u53EF_u80FD_u662F_u53F2_u4E0A_u6700_u5168_u7684CSS_u81EA_u9002_u5E94_u5E03_u5C40_u603B_u7ED3"><a href="#7_u3001_u8FD9_u53EF_u80FD_u662F_u53F2_u4E0A_u6700_u5168_u7684CSS_u81EA_u9002_u5E94_u5E03_u5C40_u603B_u7ED3" class="headerlink" title="7、这可能是史上最全的CSS自适应布局总结"></a><a href="https://mp.weixin.qq.com/s?__biz=MzAxODE2MjM1MA==&mid=2651550848&idx=1&sn=4c524f0b8fd1cc9a4a72f44210a4427b&scene=1&srcid=0514tFME6jJA3xWu00fkPyB1&key=b28b03434249256b936150d6044eb618129d13d44426061d7fdac16ad03b03da6fda40aa972b9fbe9f595bb42dd0ca4e&ascene=0&uin=NjgxMDc4NzQw&devicetype=iMac+MacBookPro12%2C1+OSX+OSX+10.10.5+build(14F27)&version=11020201&pass_ticket=XUiS2BUlfdN4kbY4evjWgs3VPghexLb8IQ7fxEReX5UUcDU8UKBXC83K%2F0lC%2BzN9" target="_blank" rel="external">7、这可能是史上最全的CSS自适应布局总结</a></h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">css布局总结</span><br></pre></td></tr></table></figure>
 
-      
-    </div>
-
     
-      
-
-    
-
   </div>
+
+  
+      <div class="git"></div>
+  
+
 </article>
+
+
+   
+  <div class="text-center donation">
+    <div class="inner-donation">
+      <span class="btn-donation">支持一下</span>
+      <div class="donation-body">
+        <div class="tip text-center">扫一扫，支持forsigner</div>
+        <ul>
+        
+          <li class="item">
+            <span>微信扫一扫</span>
+            <img src="/images/qr-wechat.png" alt="">
+          </li>
+        
+          <li class="item">
+            <span>支付宝扫一扫</span>
+            <img src="/images/qr-alipay.png" alt="">
+          </li>
+        
+        </ul>
+      </div>
+    </div>
+  </div>
+
+
+   
+  <div class="box-prev-next clearfix">
+    <a class="show pull-left" href="/2016/03/25/第一次分享前端/">
+        <i class="icon icon-angle-left"></i>
+    </a>
+    <a class="show pull-right" href="/2016/04/10/突然好想你/">
+        <i class="icon icon-angle-right"></i>
+    </a>
+  </div>
+
 
 
 
 </div>
 
-  
+
+  <a id="backTop" class="back-top">
+    <i class="icon-angle-up"></i>
+  </a>
+
+
+
+
+  <div class="modal" id="modal">
+  <span id="cover" class="cover hide"></span>
+  <div id="modal-dialog" class="modal-dialog hide-dialog">
+    <div class="modal-header">
+      <span id="close" class="btn-close">关闭</span>
+    </div>
+    <hr>
+    <div class="modal-body">
+      <ul class="list-toolbox">
+        
+          <li class="item-toolbox">
+            <a
+              class="CIRCLE"
+              href="/archives/"
+              rel="noopener noreferrer"
+              target="_self"
+              >
+              博客
+            </a>
+          </li>
+        
+          <li class="item-toolbox">
+            <a
+              class="CIRCLE"
+              href="/category/"
+              rel="noopener noreferrer"
+              target="_self"
+              >
+              分类
+            </a>
+          </li>
+        
+          <li class="item-toolbox">
+            <a
+              class="CIRCLE"
+              href="/tag/"
+              rel="noopener noreferrer"
+              target="_self"
+              >
+              标签
+            </a>
+          </li>
+        
+          <li class="item-toolbox">
+            <a
+              class="CIRCLE"
+              href="/link/"
+              rel="noopener noreferrer"
+              target="_self"
+              >
+              友链
+            </a>
+          </li>
+        
+          <li class="item-toolbox">
+            <a
+              class="CIRCLE"
+              href="/about/"
+              rel="noopener noreferrer"
+              target="_self"
+              >
+              关于
+            </a>
+          </li>
+        
+          <li class="item-toolbox">
+            <a
+              class="CIRCLE"
+              href="/atom.xml"
+              rel="noopener noreferrer"
+              target="_blank"
+              >
+              RSS
+            </a>
+          </li>
+        
+          <li class="item-toolbox">
+            <a
+              class="CIRCLE"
+              href="/search/"
+              rel="noopener noreferrer"
+              target="_self"
+              >
+              搜索
+            </a>
+          </li>
+        
+      </ul>
+
+    </div>
+  </div>
+</div>
+
+
 
   
+      <div class="fexo-comments comments-post">
+    
+  <section class="disqus-comments">
+    <div id="disqus_thread">
+      <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    </div>
+  </section>
+
+  <script>
+    var disqus_shortname = 'shirley';
+    
+    var disqus_url = 'http://tanxuewei.github.io/2016/04/07/微信上推送的好文章/';
+    
+    (function(){
+      var dsq = document.createElement('script');
+      dsq.type = 'text/javascript';
+      dsq.async = true;
+      dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+  </script>
+
+  <script id="dsq-count-scr" src="//shirley.disqus.com/count.js" async></script>
+
+
+
+    
+    
+
+    
+    
+
+    
+
+    
+    
+
+  </div>
+
+  
+
+  <script type="text/javascript">
+  function loadScript(url, callback) {
+    var script = document.createElement('script')
+    script.type = 'text/javascript';
+
+    if (script.readyState) { //IE
+      script.onreadystatechange = function() {
+        if (script.readyState == 'loaded' ||
+          script.readyState == 'complete') {
+          script.onreadystatechange = null;
+          callback();
+        }
+      };
+    } else { //Others
+      script.onload = function() {
+        callback();
+      };
+    }
+
+    script.src = url;
+    document.getElementsByTagName('head')[0].appendChild(script);
+  }
+
+  window.onload = function() {
+    loadScript('/js/bundle.js?235683', function() {
+      // load success
+    });
+  }
+</script>
+
 </body>
 </html>

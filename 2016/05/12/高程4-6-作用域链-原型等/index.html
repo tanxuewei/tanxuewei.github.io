@@ -1,5 +1,9 @@
 <!DOCTYPE html>
-<html>
+
+
+  <html class="light page-post">
+
+
 <head>
   <meta charset="utf-8">
   
@@ -8,7 +12,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
   
-    <meta name="keywords" content="shirley,前端,设计,Hexo主题,前端开发,用户体验,设计,frontend,design,nodejs,JavaScript" />
+    <meta name="keywords" content="shirley,前端,设计,Hexo主题,前端开发,用户体验,设计,frontend,vuejs,nodejs,JavaScript" />
   
 
   <meta name="description" content="为了更好的了解作用域以及原型的问题
@@ -21,90 +25,217 @@
 <meta property="og:description" content="为了更好的了解作用域以及原型的问题
 参考文章：1、javascript核心2、简单粗暴地理解js原型链–js面向对象编程
 第四章 变量、作用域和内存问题（p68）(1)p681、数据类型：基本类型和引用类型基本类型：Undefined、Null、Boolean、Number、String引用类型：保存在内存中的对象，javascript不允许直接访问内存中的位置，也就是说不能直接操作对象的内存空间">
-<meta property="og:updated_time" content="2016-05-23T12:31:05.000Z">
+<meta property="og:updated_time" content="2017-02-21T02:45:52.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="高程4-6 作用域链 原型等">
 <meta name="twitter:description" content="为了更好的了解作用域以及原型的问题
 参考文章：1、javascript核心2、简单粗暴地理解js原型链–js面向对象编程
 第四章 变量、作用域和内存问题（p68）(1)p681、数据类型：基本类型和引用类型基本类型：Undefined、Null、Boolean、Number、String引用类型：保存在内存中的对象，javascript不允许直接访问内存中的位置，也就是说不能直接操作对象的内存空间">
-  
-  
 
   
 
+  
+    <link rel="icon" href="/favicon.ico">
+  
 
-  <link rel="stylesheet" href="/css/styles.css" type="text/css">
+  <link href="/css/styles.css?v=c114cbe6" rel="stylesheet">
 
+
+  
+    <link rel="stylesheet" href="/css/personal-style.css" type="text/css">
+  
+
+  
+
+  
+  <script type="text/javascript">
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "//hm.baidu.com/hm.js?57e94d016e201fba3603a8a2b0263af0";
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+  </script>
+
+
+  
+  <script type="text/javascript">
+	(function(){
+	    var bp = document.createElement('script');
+	    var curProtocol = window.location.protocol.split(':')[0];
+	    if (curProtocol === 'https') {
+	        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';        
+	    }
+	    else {
+	        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+	    }
+	    var s = document.getElementsByTagName("script")[0];
+	    s.parentNode.insertBefore(bp, s);
+	})();
+  </script>
+
+
+
+  
+    <script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+  
+
+  
+    <link rel="stylesheet" href="//cdn.bootcss.com/font-awesome/4.3.0/css/font-awesome.min.css">
+  
 </head>
 
 <body>
-  <div class="content-post">
+
+
+  
+    <span id="toolbox-mobile" class="toolbox-mobile">盒子</span>
+  
+
+  <div class="post-header CENTER">
+   
   <div class="toolbox">
-  <div class="home-entry">盒子</div>
-  <ul class="list-entry">
-    
+    <a class="toolbox-entry" href="/">
+      <span class="toolbox-entry-text">盒子</span>
+      <i class="icon-angle-down"></i>
+      <i class="icon-home"></i>
+    </a>
+    <ul class="list-toolbox">
       
-        <li class="item-entry">
-          <a href="/">首页</a>
+        <li class="item-toolbox">
+          <a
+            class="CIRCLE"
+            href="/archives/"
+            rel="noopener noreferrer"
+            target="_self"
+            >
+            博客
+          </a>
         </li>
       
-    
-      
-        <li class="item-entry">
-          <a href="/archives/">博客</a>
+        <li class="item-toolbox">
+          <a
+            class="CIRCLE"
+            href="/category/"
+            rel="noopener noreferrer"
+            target="_self"
+            >
+            分类
+          </a>
         </li>
       
-    
-      
-        <li class="item-entry">
-          <a href="/category/">分类</a>
+        <li class="item-toolbox">
+          <a
+            class="CIRCLE"
+            href="/tag/"
+            rel="noopener noreferrer"
+            target="_self"
+            >
+            标签
+          </a>
         </li>
       
-    
-      
-        <li class="item-entry">
-          <a href="/tags/">标签</a>
+        <li class="item-toolbox">
+          <a
+            class="CIRCLE"
+            href="/link/"
+            rel="noopener noreferrer"
+            target="_self"
+            >
+            友链
+          </a>
         </li>
       
-    
-      
-        <li class="item-entry">
-          <a href="/about/">关于</a>
+        <li class="item-toolbox">
+          <a
+            class="CIRCLE"
+            href="/about/"
+            rel="noopener noreferrer"
+            target="_self"
+            >
+            关于
+          </a>
         </li>
       
-    
-      
-        <li class="item-entry">
-          <a href="/atom.xml">RSS</a>
+        <li class="item-toolbox">
+          <a
+            class="CIRCLE"
+            href="/atom.xml"
+            rel="noopener noreferrer"
+            target="_blank"
+            >
+            RSS
+          </a>
         </li>
       
-    
-  </ul>
+        <li class="item-toolbox">
+          <a
+            class="CIRCLE"
+            href="/search/"
+            rel="noopener noreferrer"
+            target="_self"
+            >
+            搜索
+          </a>
+        </li>
+      
+    </ul>
+  </div>
+
+
 </div>
 
-  <article id="post-高程4-6-作用域链-原型等" class="article article-type-post" itemscope itemprop="blogPost">
+
+  <div id="toc" class="toc-article">
+    <strong class="toc-title">文章目录</strong>
+    <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#u7B2C_u56DB_u7AE0__u53D8_u91CF_u3001_u4F5C_u7528_u57DF_u548C_u5185_u5B58_u95EE_u9898_uFF08p68_uFF09"><span class="toc-text">第四章 变量、作用域和内存问题（p68）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#u7B2C_u4E94_u7AE0__u5F15_u7528_u7C7B_u578B_p83"><span class="toc-text">第五章 引用类型 p83</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#u7B2C_u516D_u7AE0__u9762_u5411_u5BF9_u8C61_u7A0B_u5E8F_u8BBE_u8BA1"><span class="toc-text">第六章  面向对象程序设计</span></a></li></ol>
+  </div>
+
+
+
+<div class="content content-post CENTER">
+   <article id="post-高程4-6-作用域链-原型等" class="article article-type-post" itemprop="blogPost">
   <header class="article-header">
     <h1 class="post-title">高程4-6 作用域链 原型等</h1>
 
     <div class="article-meta">
-      <span>2016-05-12</span>
+      <span>
+        <i class="icon-calendar"></i>
+        <span>2016.05.12</span>
+      </span>
 
-      <span> | </span>
-
-      <span class="article-author">Shirley Tan</span>
-
-      <span> | </span>
+      
+        <span class="article-author">
+          <i class="icon-user"></i>
+          <span>Shirley Tan</span>
+        </span>
+      
 
       
 
+
+      
+        <span>
+          <i class="icon-comment"></i>
+          <a href="http://tanxuewei.github.io/2016/05/12/高程4-6-作用域链-原型等/#disqus_thread"></a>
+        </span>
+      
+
+      
+      <i class="fa fa-eye"></i> 
+        <span id="busuanzi_container_page_pv">
+           &nbsp热度 <span id="busuanzi_value_page_pv">
+           <i class="fa fa-spinner fa-spin"></i></span>℃
+        </span>
+      
+      
     </div>
   </header>
 
-  <div class="article-inner">
-
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>为了更好的了解作用域以及原型的问题</p>
+  <div class="article-content">
+    
+      <p>为了更好的了解作用域以及原型的问题</p>
 <p>参考文章：<br><a href="https://mp.weixin.qq.com/s?__biz=MjM5MTA1MjAxMQ==&mid=402446684&idx=1&sn=587c1bc6318b893be71c9fb4e6a538fd&scene=1&srcid=0322YxccOnbFQhULBEbiWGjB&key=710a5d99946419d95cd5af9df5ec89f5c31c685067a414b04c018d2b93f6ff6d3f167399c1fa38ea8c1cced397de4c82&ascene=0&uin=NjgxMDc4NzQw&devicetype=iMac+MacBookPro12%2C1+OSX+OSX+10.10.5+build(14F27)&version=11020201&pass_ticket=MZOcKzTJv6f%2B7BvvSIMq%2BTlEnGoxo5FD8ehXQTouOnGo9yl3dC7fQTo%2FJPl%2B0rd7" target="_blank" rel="external">1、javascript核心</a><br><a href="https://mp.weixin.qq.com/s?__biz=MzAxODE2MjM1MA==&mid=2651550838&idx=1&sn=22de8ecb52dc55bd6850bf9cc72cdedb&scene=1&srcid=05126fvQXzBpBErqqQDDK9La&key=b28b03434249256b4da15d672dda12b019152472f6ca6d5c8dc34354cafe41d5edd397f5dddd1cd57088e9e1e93e5edc&ascene=0&uin=NjgxMDc4NzQw&devicetype=iMac+MacBookPro12%2C1+OSX+OSX+10.10.5+build(14F27)&version=11020201&pass_ticket=%2F3eHPqK80PvGhtrZhg%2FW2tJ0JTIDU%2BITKLQ%2FlvEWse8sFxIHNX9OJwN%2FwLvdzj5s" target="_blank" rel="external">2、简单粗暴地理解js原型链–js面向对象编程</a></p>
 <h3 id="u7B2C_u56DB_u7AE0__u53D8_u91CF_u3001_u4F5C_u7528_u57DF_u548C_u5185_u5B58_u95EE_u9898_uFF08p68_uFF09"><a href="#u7B2C_u56DB_u7AE0__u53D8_u91CF_u3001_u4F5C_u7528_u57DF_u548C_u5185_u5B58_u95EE_u9898_uFF08p68_uFF09" class="headerlink" title="第四章 变量、作用域和内存问题（p68）"></a>第四章 变量、作用域和内存问题（p68）</h3><p>(1)p68<br>1、数据类型：基本类型和引用类型<br>基本类型：Undefined、Null、Boolean、Number、String<br>引用类型：保存在内存中的对象，javascript不允许直接访问内存中的位置，也就是说不能直接操作对象的内存空间，实际上操作的是对象的引用.(注释1：当复制保存着对象的某个变量时，操作的是对象的引用。但在为对象添加属性时，操作的是实际的对象？？)</p>
 <p>2、复制变量值<br>基本类型：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">var a = <span class="number">5</span>;</span><br><span class="line">var b = a;</span><br><span class="line">a = <span class="number">6</span>;</span><br><span class="line">alert(a); //<span class="number">6</span></span><br><span class="line">alert(b); //<span class="number">5</span></span><br></pre></td></tr></table></figure></p>
@@ -128,24 +259,243 @@
 <p>apply和call这两个方法的用途都是在特定的作用域中调用函数，实际上等于设置函数体内this对象的值。<br>apply()  //sum.apply(this, arguments);<br>call()  //sum.call(this, num1, num2);<br>apply和call真正的强大的地方是能够扩充函数赖以运行的作用域</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">window.color = <span class="string">'red'</span>;</span><br><span class="line">var o = &#123; color: <span class="string">'blue'</span>&#125;;</span><br><span class="line"></span><br><span class="line"><span class="keyword">function</span> <span class="function"><span class="title">sayColor</span></span>()&#123;</span><br><span class="line">    <span class="built_in">return</span> this.color;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">sayColor();   //red</span><br><span class="line">sayColor.call(this);   //red</span><br><span class="line">sayColor.call(window);   //red</span><br><span class="line">sayColor.call(o);   //blue</span><br><span class="line">sayColor.bind(o);   //blue</span><br></pre></td></tr></table></figure>
 <p>p118-p137 TODO</p>
-<h3 id="u7B2C_u516D_u7AE0__u9762_u5411_u5BF9_u8C61_u7A0B_u5E8F_u8BBE_u8BA1"><a href="#u7B2C_u516D_u7AE0__u9762_u5411_u5BF9_u8C61_u7A0B_u5E8F_u8BBE_u8BA1" class="headerlink" title="第六章  面向对象程序设计"></a>第六章  面向对象程序设计</h3>
-      
-    </div>
+<h3 id="u7B2C_u516D_u7AE0__u9762_u5411_u5BF9_u8C61_u7A0B_u5E8F_u8BBE_u8BA1"><a href="#u7B2C_u516D_u7AE0__u9762_u5411_u5BF9_u8C61_u7A0B_u5E8F_u8BBE_u8BA1" class="headerlink" title="第六章  面向对象程序设计"></a>第六章  面向对象程序设计</h3><p>语法</p>
+<p>Object.defineProperty(obj,prop,descriptor)</p>
+<p>参数</p>
+<p>obj:目标对象</p>
+<p>prop:需要定义的属性或方法的名称</p>
+<p>descriptor:目标属性所拥有的特性</p>
+<p>可供定义的特性列表</p>
+<p>value:属性的值</p>
+<p>writable:如果为false，属性的值就不能被重写。</p>
+<p>get: 一旦目标属性被访问就会调回此方法，并将此方法的运算结果返回用户。</p>
+<p>set:一旦目标属性被赋值，就会调回此方法。</p>
+<p>configurable:如果为false，则任何尝试删除目标属性或修改属性以下特性（writable, configurable, enumerable）的行为将被无效化。</p>
+<p>enumerable:是否能在for…in循环中遍历出来或在Object.keys中列举出来。</p>
 
     
-      
-
-    
-
   </div>
+
+  
+      <div class="git"></div>
+  
+
 </article>
+
+
+   
+  <div class="text-center donation">
+    <div class="inner-donation">
+      <span class="btn-donation">支持一下</span>
+      <div class="donation-body">
+        <div class="tip text-center">扫一扫，支持forsigner</div>
+        <ul>
+        
+          <li class="item">
+            <span>微信扫一扫</span>
+            <img src="/images/qr-wechat.png" alt="">
+          </li>
+        
+          <li class="item">
+            <span>支付宝扫一扫</span>
+            <img src="/images/qr-alipay.png" alt="">
+          </li>
+        
+        </ul>
+      </div>
+    </div>
+  </div>
+
+
+   
+  <div class="box-prev-next clearfix">
+    <a class="show pull-left" href="/2016/05/09/读-javascript高级程序设计-笔记/">
+        <i class="icon icon-angle-left"></i>
+    </a>
+    <a class="show pull-right" href="/2016/05/17/CSS布局相关/">
+        <i class="icon icon-angle-right"></i>
+    </a>
+  </div>
+
 
 
 
 </div>
 
-  
+
+  <a id="backTop" class="back-top">
+    <i class="icon-angle-up"></i>
+  </a>
+
+
+
+
+  <div class="modal" id="modal">
+  <span id="cover" class="cover hide"></span>
+  <div id="modal-dialog" class="modal-dialog hide-dialog">
+    <div class="modal-header">
+      <span id="close" class="btn-close">关闭</span>
+    </div>
+    <hr>
+    <div class="modal-body">
+      <ul class="list-toolbox">
+        
+          <li class="item-toolbox">
+            <a
+              class="CIRCLE"
+              href="/archives/"
+              rel="noopener noreferrer"
+              target="_self"
+              >
+              博客
+            </a>
+          </li>
+        
+          <li class="item-toolbox">
+            <a
+              class="CIRCLE"
+              href="/category/"
+              rel="noopener noreferrer"
+              target="_self"
+              >
+              分类
+            </a>
+          </li>
+        
+          <li class="item-toolbox">
+            <a
+              class="CIRCLE"
+              href="/tag/"
+              rel="noopener noreferrer"
+              target="_self"
+              >
+              标签
+            </a>
+          </li>
+        
+          <li class="item-toolbox">
+            <a
+              class="CIRCLE"
+              href="/link/"
+              rel="noopener noreferrer"
+              target="_self"
+              >
+              友链
+            </a>
+          </li>
+        
+          <li class="item-toolbox">
+            <a
+              class="CIRCLE"
+              href="/about/"
+              rel="noopener noreferrer"
+              target="_self"
+              >
+              关于
+            </a>
+          </li>
+        
+          <li class="item-toolbox">
+            <a
+              class="CIRCLE"
+              href="/atom.xml"
+              rel="noopener noreferrer"
+              target="_blank"
+              >
+              RSS
+            </a>
+          </li>
+        
+          <li class="item-toolbox">
+            <a
+              class="CIRCLE"
+              href="/search/"
+              rel="noopener noreferrer"
+              target="_self"
+              >
+              搜索
+            </a>
+          </li>
+        
+      </ul>
+
+    </div>
+  </div>
+</div>
+
+
 
   
+      <div class="fexo-comments comments-post">
+    
+  <section class="disqus-comments">
+    <div id="disqus_thread">
+      <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    </div>
+  </section>
+
+  <script>
+    var disqus_shortname = 'shirley';
+    
+    var disqus_url = 'http://tanxuewei.github.io/2016/05/12/高程4-6-作用域链-原型等/';
+    
+    (function(){
+      var dsq = document.createElement('script');
+      dsq.type = 'text/javascript';
+      dsq.async = true;
+      dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+  </script>
+
+  <script id="dsq-count-scr" src="//shirley.disqus.com/count.js" async></script>
+
+
+
+    
+    
+
+    
+    
+
+    
+
+    
+    
+
+  </div>
+
+  
+
+  <script type="text/javascript">
+  function loadScript(url, callback) {
+    var script = document.createElement('script')
+    script.type = 'text/javascript';
+
+    if (script.readyState) { //IE
+      script.onreadystatechange = function() {
+        if (script.readyState == 'loaded' ||
+          script.readyState == 'complete') {
+          script.onreadystatechange = null;
+          callback();
+        }
+      };
+    } else { //Others
+      script.onload = function() {
+        callback();
+      };
+    }
+
+    script.src = url;
+    document.getElementsByTagName('head')[0].appendChild(script);
+  }
+
+  window.onload = function() {
+    loadScript('/js/bundle.js?235683', function() {
+      // load success
+    });
+  }
+</script>
+
 </body>
 </html>
